@@ -1,0 +1,180 @@
+<!doctype html>
+<!-- Page générée par maquette/scripts/assembler.js : ne pas modifier ici, voir maquette/src/ -->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nos recettes — Foie Gras Quillot</title>
+<meta name="description" content="Des recettes simples à cuisiner avec le foie gras, les rillettes, les confits et le cassoulet Quillot. Chaque recette propose directement les produits à ajouter au panier.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="recettes" class="entete-clair">
+<a class="skip" href="#contenu">Aller au contenu</a>
+
+<div class="annonce" aria-label="Informations">
+  <div class="annonce__piste">
+    <span>Fait maison à Casseneuil</span><span>Livraison offerte dès 400 €</span><span>Prix du public — championnat du monde du cassoulet 2026</span><span>Sur les marchés d’Andernos, Royan, Soulac</span>
+  </div>
+  <div class="annonce__piste" aria-hidden="true">
+    <span>Fait maison à Casseneuil</span><span>Livraison offerte dès 400 €</span><span>Prix du public — championnat du monde du cassoulet 2026</span><span>Sur les marchés d’Andernos, Royan, Soulac</span>
+  </div>
+</div>
+
+<header class="entete" id="entete">
+  <a class="marque" href="index.html"><i></i>Foie Gras Quillot</a>
+  <nav class="nav" aria-label="Navigation principale">
+    <a href="histoire.html">Notre histoire</a>
+    <a href="produits.html">Nos produits</a>
+    <a href="recettes.html" aria-current="page">Nos recettes</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="entete__outils">
+    <button class="pill pill--panier" type="button" data-panier-ouvrir aria-controls="panier">Panier <span class="pill__n" data-panier-n>0</span></button>
+    <a class="pill" href="#">Mon compte</a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false"><i></i><i></i></button>
+  </div>
+</header>
+<nav class="volet" id="volet" aria-label="Menu mobile">
+  <a href="histoire.html">Notre histoire</a>
+    <a href="produits.html">Nos produits</a>
+    <a href="recettes.html" aria-current="page">Nos recettes</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+
+<main id="contenu">
+
+<!-- ═════════ EN-TÊTE ═════════ -->
+<section class="ph ph--clair">
+  <div class="ph__titre">
+    <span class="etiquette rv">À table</span>
+    <h1 class="sp">Nos <em>recettes</em></h1>
+  </div>
+  <div class="ph__cote rv">
+    <p>Des recettes simples, pensées pour nos produits. Sur chaque page, vous retrouvez ce qu’il faut pour cuisiner : un clic, et c’est dans le panier.</p>
+  </div>
+</section>
+
+<!-- ═════════ FILTRES ═════════ -->
+<div class="filtres" data-unite="recette" data-filtres="#grille-recettes" role="toolbar" aria-label="Filtrer les recettes">
+    <button class="filtre is-actif" type="button" data-cat="tout" aria-pressed="true">Tous <sup>9</sup></button>
+    <button class="filtre" type="button" data-cat="aperitif" aria-pressed="false">Apéritif <sup>4</sup></button>
+    <button class="filtre" type="button" data-cat="entree" aria-pressed="false">Entrée <sup>3</sup></button>
+    <button class="filtre" type="button" data-cat="plat" aria-pressed="false">Plat <sup>2</sup></button>
+    <button class="filtre" type="button" data-cat="fetes" aria-pressed="false">Fêtes <sup>2</sup></button>
+</div>
+
+<!-- ═════════ GRILLE ═════════ -->
+<section class="catalogue catalogue--recettes">
+  <p class="catalogue__compte" aria-live="polite"><span data-compte></span></p>
+  <div class="grille-recettes" id="grille-recettes">
+      <a class="recette-carte" href="recette-cassoulet-gratine.html" data-cats="plat">
+        <div class="photo recette-carte__photo"><img src="img/cassoulet.jpg" alt="" style="object-position:50% 55%" loading="lazy"><span class="badge-etat">Plat</span></div>
+        <h3>Cassoulet gratiné, croûte bien dorée</h3>
+        <p class="recette-carte__meta"><span>35 min</span><span>4 pers.</span><span>Facile</span></p>
+        <p class="recette-carte__avec"><span>Avec Cassoulet aux haricots tarbais</span><span>39,60 €</span></p>
+      </a>
+      <a class="recette-carte" href="recette-toasts-foie-gras-figues.html" data-cats="aperitif">
+        <div class="photo recette-carte__photo"><img src="img/toast-foie-gras.jpg" alt="" style="object-position:50% 50%" loading="lazy"><span class="badge-etat">Apéritif</span></div>
+        <h3>Toasts de foie gras, chutney de figues</h3>
+        <p class="recette-carte__meta"><span>25 min</span><span>6 pers.</span><span>Facile</span></p>
+        <p class="recette-carte__avec"><span>Avec Bloc de foie gras de canard</span><span>23,80 €</span></p>
+      </a>
+      <a class="recette-carte" href="recette-foie-gras-pommes-monbazillac.html" data-cats="entree fetes">
+        <div class="photo recette-carte__photo"><img src="img/foie-gras-poele.jpg" alt="" style="object-position:50% 60%" loading="lazy"><span class="badge-etat">Entrée · Fêtes</span></div>
+        <h3>Foie gras mi-cuit, pommes caramélisées et Monbazillac</h3>
+        <p class="recette-carte__meta"><span>25 min</span><span>4 pers.</span><span>Facile</span></p>
+        <p class="recette-carte__avec"><span>Avec Foie gras de canard mi-cuit</span><span>42 €</span></p>
+      </a>
+      <a class="recette-carte" href="recette-confit-pommes-sarladaises.html" data-cats="plat">
+        <div class="photo recette-carte__photo"><img src="img/hero-confit.jpg" alt="" style="object-position:50% 50%" loading="lazy"><span class="badge-etat">Plat</span></div>
+        <h3>Confit de canard et pommes sarladaises</h3>
+        <p class="recette-carte__meta"><span>50 min</span><span>3 pers.</span><span>Facile</span></p>
+        <p class="recette-carte__avec"><span>Avec Confit de canard</span><span>24,50 €</span></p>
+      </a>
+      <a class="recette-carte" href="recette-bouchees-rillettes.html" data-cats="aperitif">
+        <div class="photo recette-carte__photo"><img src="img/produit-rillettes.jpg" alt="" style="object-position:50% 50%" loading="lazy"><span class="badge-etat">Apéritif</span></div>
+        <h3>Bouchées de pommes de terre aux rillettes de canard</h3>
+        <p class="recette-carte__meta"><span>45 min</span><span>6 pers.</span><span>Facile</span></p>
+        <p class="recette-carte__avec"><span>Avec Rillettes pur canard</span><span>18,50 €</span></p>
+      </a>
+      <a class="recette-carte" href="recette-planche-apero-sud-ouest.html" data-cats="aperitif">
+        <div class="photo recette-carte__photo"><img src="img/main-planche.jpg" alt="" style="object-position:50% 40%" loading="lazy"><span class="badge-etat">Apéritif</span></div>
+        <h3>Planche apéro du Sud-Ouest</h3>
+        <p class="recette-carte__meta"><span>15 min</span><span>6 pers.</span><span>Très facile</span></p>
+        <p class="recette-carte__avec"><span>Avec Rillettes pur canard</span><span>18,50 €</span></p>
+      </a>
+      <a class="recette-carte" href="recette-salade-perigourdine.html" data-cats="entree">
+        <div class="photo recette-carte__photo"><img src="img/produit-mi-cuit-tranches.jpg" alt="" style="object-position:50% 50%" loading="lazy"><span class="badge-etat">Entrée</span></div>
+        <h3>Salade périgourdine, gésiers confits et foie gras</h3>
+        <p class="recette-carte__meta"><span>20 min</span><span>4 pers.</span><span>Facile</span></p>
+        <p class="recette-carte__avec"><span>Avec Gésiers d’oie confits</span><span>17,80 €</span></p>
+      </a>
+      <a class="recette-carte" href="recette-foie-gras-de-fete.html" data-cats="fetes entree">
+        <div class="photo recette-carte__photo"><img src="img/assiette-blanche.jpg" alt="" style="object-position:50% 62%" loading="lazy"><span class="badge-etat">Fêtes · Entrée</span></div>
+        <h3>Le foie gras de fête, brioche toastée et confiture de figues</h3>
+        <p class="recette-carte__meta"><span>15 min</span><span>6 pers.</span><span>Très facile</span></p>
+        <p class="recette-carte__avec"><span>Avec Foie gras de canard entier</span><span>52,80 €</span></p>
+      </a>
+      <a class="recette-carte" href="recette-tartines-pate-sanglier.html" data-cats="aperitif">
+        <div class="photo recette-carte__photo"><img src="img/table-charcuterie.jpg" alt="" style="object-position:50% 50%" loading="lazy"><span class="badge-etat">Apéritif</span></div>
+        <h3>Tartines de pâté de sanglier, oignons confits</h3>
+        <p class="recette-carte__meta"><span>25 min</span><span>4 pers.</span><span>Très facile</span></p>
+        <p class="recette-carte__avec"><span>Avec Pâté de sanglier</span><span>8,40 €</span></p>
+      </a>
+  </div>
+</section>
+
+<!-- ═════════ SUITE ═════════ -->
+<section class="suite suite--un">
+  <a class="suite__lien" href="produits.html">
+    <img src="img/produit-mi-cuit.jpg" alt="" loading="lazy">
+    <span class="etiquette">La boutique</span>
+    <h2>Tous nos produits</h2>
+  </a>
+</section>
+</main>
+
+<footer class="contact sur-fonce" id="contact">
+  <div class="contact__haut">
+    <h2 class="sp">Venez <em>nous voir</em></h2>
+    <div class="coordonnees rv">
+      <div><span class="etiquette">Atelier de fabrication</span>1795 route de Bias<br>47440 Casseneuil</div>
+      <div><span class="etiquette">Téléphone</span><a href="tel:0553402800">05 53 40 28 00</a> · <a href="tel:0607323619">06 07 32 36 19</a></div>
+      <div><span class="etiquette">Horaires de l’atelier</span>Du lundi au vendredi, 8h–12h et 14h–17h</div>
+    </div>
+  </div>
+  <form class="formulaire" action="#" onsubmit="return false">
+    <label><span>Nom</span><input type="text" name="nom" autocomplete="family-name"></label>
+    <label><span>Prénom</span><input type="text" name="prenom" autocomplete="given-name"></label>
+    <label class="plein"><span>E-mail</span><input type="email" name="email" autocomplete="email"></label>
+    <label class="plein"><span>Une question sur nos produits ?</span><textarea name="message"></textarea></label>
+    <button class="btn btn--plein" type="submit">Envoyer <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h17M14 6l6 6-6 6"/></svg></button>
+  </form>
+  <div class="mot-geant" aria-hidden="true">Foie gras Quillot</div>
+</footer>
+<div class="pied sur-fonce">
+  <span>© 2026 Foie Gras Quillot — SAS, Casseneuil</span>
+  <nav><a href="#">Mentions légales</a><a href="#">C.G.V.</a><a href="#">Politique de confidentialité</a><a href="#">Mon compte</a></nav>
+</div>
+
+
+<div class="panier" id="panier" aria-hidden="true">
+  <div class="panier__voile" data-panier-fermer></div>
+  <aside class="panier__tiroir" role="dialog" aria-modal="true" aria-labelledby="panier-titre">
+    <header class="panier__tete">
+      <h2 id="panier-titre">Votre panier</h2>
+      <button class="fermer" type="button" data-panier-fermer aria-label="Fermer le panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+    </header>
+    <div class="panier__corps" id="panier-corps"></div>
+    <footer class="panier__pied" id="panier-pied"></footer>
+  </aside>
+</div>
+
+
+<div class="curseur" id="curseur"><span></span></div>
+<script src="donnees.js"></script>
+<script src="boutique.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
