@@ -4,24 +4,35 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Notre histoire — Foie Gras Quillot</title>
-<meta name="description" content="Depuis 1981, la famille Quillot élève, prépare et vend foie gras, rillettes, pâtés et confits à Casseneuil (Lot-et-Garonne) et sur les marchés de Gironde et de Charente-Maritime.">
+<title>Notre histoire, depuis 1981 | Foie Gras Quillot</title>
+<meta name="description" content="Depuis 1981, la famille Quillot élève, prépare et vend foie gras, rillettes et confits à Casseneuil et sur les marchés de Gironde et de Charente-Maritime.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#822322">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Foie Gras Quillot">
+<meta property="og:title" content="Notre histoire, depuis 1981 | Foie Gras Quillot">
+<meta property="og:description" content="Depuis 1981, la famille Quillot élève, prépare et vend foie gras, rillettes et confits à Casseneuil et sur les marchés de Gironde et de Charente-Maritime.">
+<meta property="og:url" content="https://prestacomm.github.io/foiegrasquillot/histoire.html">
+<meta property="og:image" content="https://prestacomm.github.io/foiegrasquillot/img/partage-1200x630.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fonts/Inter-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/Quicksand-500-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/fonts.css">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body data-page="histoire">
 <a class="skip" href="#contenu">Aller au contenu</a>
 
-<div class="annonce" aria-label="Informations">
-  <div class="annonce__piste">
-    <span>Fait maison à Casseneuil</span><span>Livraison offerte dès 400 €</span><span>Prix du public — championnat du monde du cassoulet 2026</span><span>Sur les marchés d’Andernos, Royan, Soulac</span>
-  </div>
-  <div class="annonce__piste" aria-hidden="true">
-    <span>Fait maison à Casseneuil</span><span>Livraison offerte dès 400 €</span><span>Prix du public — championnat du monde du cassoulet 2026</span><span>Sur les marchés d’Andernos, Royan, Soulac</span>
-  </div>
+<div class="annonce" role="region" aria-label="Informations">
+  <div class="annonce__piste"><span>Fait maison à Casseneuil</span><span>Livraison offerte dès 400&nbsp;€</span><span aria-hidden="true">Fait maison à Casseneuil</span><span aria-hidden="true">Livraison offerte dès 400&nbsp;€</span><span aria-hidden="true">Fait maison à Casseneuil</span><span aria-hidden="true">Livraison offerte dès 400&nbsp;€</span><span aria-hidden="true">Fait maison à Casseneuil</span><span aria-hidden="true">Livraison offerte dès 400&nbsp;€</span></div>
+  <div class="annonce__piste" aria-hidden="true"><span aria-hidden="true">Fait maison à Casseneuil</span><span aria-hidden="true">Livraison offerte dès 400&nbsp;€</span><span aria-hidden="true">Fait maison à Casseneuil</span><span aria-hidden="true">Livraison offerte dès 400&nbsp;€</span><span aria-hidden="true">Fait maison à Casseneuil</span><span aria-hidden="true">Livraison offerte dès 400&nbsp;€</span><span aria-hidden="true">Fait maison à Casseneuil</span><span aria-hidden="true">Livraison offerte dès 400&nbsp;€</span></div>
 </div>
 
 <header class="entete" id="entete">
-  <a class="marque" href="index.html"><i></i>Foie Gras Quillot</a>
+  <a class="marque" href="index.html"><img class="marque__logo marque__logo--creme" src="img/logo-creme.webp" alt="" width="240" height="267"><img class="marque__logo marque__logo--olive" src="img/logo-olive.webp" alt="" width="240" height="267"><span>Foie Gras Quillot</span></a>
   <nav class="nav" aria-label="Navigation principale">
     <a href="histoire.html" aria-current="page">Notre histoire</a>
     <a href="produits.html">Nos produits</a>
@@ -30,8 +41,8 @@
   </nav>
   <div class="entete__outils">
     <button class="pill pill--panier" type="button" data-panier-ouvrir aria-controls="panier">Panier <span class="pill__n" data-panier-n>0</span></button>
-    <a class="pill" href="#">Mon compte</a>
-    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false"><i></i><i></i></button>
+    <a class="pill pill--compte" href="compte.html">Mon compte</a>
+    <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="volet"><i></i><i></i></button>
   </div>
 </header>
 <nav class="volet" id="volet" aria-label="Menu mobile">
@@ -39,6 +50,7 @@
     <a href="produits.html">Nos produits</a>
     <a href="recettes.html">Nos recettes</a>
     <a href="#contact">Contact</a>
+  <div class="volet__bas"><a href="compte.html">Mon compte</a><a href="tel:0553402800">05 53 40 28 00</a></div>
 </nav>
 
 
@@ -46,11 +58,11 @@
 
 <!-- ═════════ OUVERTURE ═════════ -->
 <section class="ph ph--photo sur-fonce">
-  <img class="ph__fond" src="img/histoire-etal-casseneuil.jpg" alt="L’étal Foie Gras Quillot de Casseneuil, dans les années 1980" data-par="-60" fetchpriority="high">
+  <img class="ph__fond" data-par="-60" src="img/histoire-etal-casseneuil.jpg" alt="L’étal Foie Gras Quillot de Casseneuil, dans les années 1980" fetchpriority="high" width="1600" height="1245">
   <div class="ph__texte">
     <span class="etiquette">Depuis 1981 · Casseneuil, Lot-et-Garonne</span>
     <h1 class="sp">Notre histoire</h1>
-    <p>Quarante-cinq ans d’atelier, de marchés et de recettes transmises dans la famille.</p>
+    <p>Plus de quarante ans d’atelier, de marchés et de recettes transmises dans la famille.</p>
   </div>
 </section>
 
@@ -62,7 +74,7 @@
     <div class="hi-intro__texte rv">
       <p>Cette année-là, Daniel, le fils de M. et Mme Quillot, démarre la production et la préparation de canards et d’oies sur l’exploitation familiale. Sa grand-mère paternelle l’initie vite à la rillette pur canard et à la rillette pure oie.</p>
       <p>Cette recette ancienne a presque disparu des conserveries modernes. Elle est pourtant toujours fabriquée dans notre laboratoire : elle demande du temps et de la main-d’œuvre, mais c’est elle, encore aujourd’hui, qui fait la renommée de la maison.</p>
-      <a class="lien-fleche" href="produits.html#pates-rillettes">Goûter les rillettes <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h17M14 6l6 6-6 6"/></svg></a>
+      <a class="lien-fleche" href="produits.html#pates-rillettes">Goûter les rillettes <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg></a>
     </div>
   </div>
   <ul class="chiffres rv" aria-label="La maison en quelques chiffres">
@@ -86,7 +98,7 @@
         <h3>La ferme familiale</h3>
         <p>Élevage, gavage et vente de canards gras frais : l’activité se développe sur les marchés de Bergerac et de Ribérac. Daniel apprend la rillette auprès de sa grand-mère.</p>
       </div>
-      <div class="photo etape__photo img-rv"><img src="img/histoire-marche-noir-blanc.jpg" alt="Un marché dans les années 1980" loading="lazy"></div>
+      <div class="photo etape__photo img-rv"><img src="img/histoire-marche-noir-blanc.jpg" alt="Un marché dans les années 1980" loading="lazy" decoding="async" width="1024" height="624"></div>
     </li>
     <li class="etape">
       <span class="etape__annee">1982<small>–83</small></span>
@@ -94,7 +106,7 @@
         <h3>La transformation</h3>
         <p>La ferme prépare désormais ses canards et ses oies gras en conserves. La vente commence au marché de Montalivet, en Gironde, puis à Soulac-sur-Mer en 1983. Jusqu’en 1991, tout est préparé dans le laboratoire de la ferme, aux normes françaises.</p>
       </div>
-      <div class="photo etape__photo img-rv"><img src="img/histoire-etal-casseneuil.jpg" alt="L’étal de la ferme des Barrails" loading="lazy"></div>
+      <div class="photo etape__photo img-rv"><img src="img/histoire-etal-casseneuil.jpg" alt="L’étal de la ferme des Barrails" loading="lazy" decoding="async" width="1600" height="1245"></div>
     </li>
     <li class="etape">
       <span class="etape__annee">1991</span>
@@ -102,7 +114,7 @@
         <h3>Le laboratoire</h3>
         <p>Naissance de la SARL Les Barrails « Foie Gras Quillot » et construction d’un laboratoire aux normes européennes, pour vendre aussi aux restaurateurs et aux magasins.</p>
       </div>
-      <div class="photo etape__photo img-rv"><img src="img/histoire-stand.jpg" alt="Un ancien stand Foie Gras Quillot" loading="lazy"></div>
+      <div class="photo etape__photo img-rv"><img src="img/histoire-stand.jpg" alt="Un ancien stand Foie Gras Quillot" loading="lazy" decoding="async" width="1024" height="634"></div>
     </li>
     <li class="etape">
       <span class="etape__annee">1997</span>
@@ -110,7 +122,7 @@
         <h3>L’agrément européen</h3>
         <p>L’entreprise obtient l’agrément européen. Son métier : transformer et commercialiser des produits à base de canards et d’oies élevés et gavés en France.</p>
       </div>
-      <div class="photo etape__photo img-rv"><img src="img/histoire-daniel.jpg" alt="Daniel Quillot sur le marché" loading="lazy"></div>
+      <div class="photo etape__photo img-rv"><img src="img/histoire-daniel.jpg" alt="Daniel Quillot sur le marché" loading="lazy" decoding="async" width="1024" height="679"></div>
     </li>
     <li class="etape">
       <span class="etape__annee">2006</span>
@@ -118,7 +130,7 @@
         <h3>Royan</h3>
         <p>Le 6 décembre, l’entreprise s’installe sur le marché de Royan, en Charente-Maritime. Le marché a rouvert le 3 juin 2024, après rénovation.</p>
       </div>
-      <div class="photo etape__photo img-rv"><img src="img/marche-royan.jpg" alt="Notre étal au marché de Royan" loading="lazy"></div>
+      <div class="photo etape__photo img-rv"><img src="img/marche-royan.jpg" alt="Notre étal au marché de Royan" loading="lazy" decoding="async" width="1024" height="771"></div>
     </li>
     <li class="etape">
       <span class="etape__annee">2012<small>–18</small></span>
@@ -126,7 +138,7 @@
         <h3>Claouey, puis Andernos</h3>
         <p>En 2012, arrivée à Claouey, à Lège-Cap-Ferret. En 2018, c’est le marché d’Andernos-les-Bains. Le 20 juin 2024, l’étal s’installe dans le nouveau marché municipal, après la démolition de la halle.</p>
       </div>
-      <div class="photo etape__photo img-rv"><img src="img/marche-andernos.jpg" alt="Notre étal au marché d’Andernos" loading="lazy"></div>
+      <div class="photo etape__photo img-rv"><img src="img/marche-andernos.jpg" alt="Notre étal au marché d’Andernos" loading="lazy" decoding="async" width="800" height="600"></div>
     </li>
     <li class="etape">
       <span class="etape__annee">2021</span>
@@ -141,7 +153,7 @@
         <h3>Thierry rejoint l’atelier</h3>
         <p>En octobre, Thierry Batista-Quillot, neveu de Daniel, rejoint l’entreprise, comme son frère Bertrand avant lui.</p>
       </div>
-      <div class="photo etape__photo img-rv"><img src="img/marche-thierry.jpg" alt="Thierry au service sur le marché" loading="lazy"></div>
+      <div class="photo etape__photo img-rv"><img src="img/marche-thierry.jpg" alt="Thierry au service sur le marché" loading="lazy" decoding="async" width="1170" height="1160"></div>
     </li>
   </ol>
 </section>
@@ -154,9 +166,9 @@
   </div>
   <ol class="savoir__pas">
     <li class="rv"><b>1</b><h3>Les carcasses confites</h3><p>Les carcasses sont confites dans la graisse.</p></li>
-    <li class="rv" style="--d:.1s"><b>2</b><h3>La viande fine</h3><p>La viande maigre, celle qui se cache près des os, est retirée à la main.</p></li>
-    <li class="rv" style="--d:.2s"><b>3</b><h3>L’assaisonnement</h3><p>Elle est assaisonnée puis mise en boîte, sans porc : uniquement du canard, ou de l’oie.</p></li>
-    <li class="rv" style="--d:.3s"><b>4</b><h3>La dégustation</h3><p>À savourer à température ambiante, pour garder toute la souplesse et le parfum.</p></li>
+    <li class="rv"><b>2</b><h3>La viande fine</h3><p>La viande maigre, celle qui se cache près des os, est retirée à la main.</p></li>
+    <li class="rv"><b>3</b><h3>L’assaisonnement</h3><p>Elle est assaisonnée puis mise en boîte, sans porc : uniquement du canard, ou de l’oie.</p></li>
+    <li class="rv"><b>4</b><h3>La dégustation</h3><p>À savourer à température ambiante, pour garder toute la souplesse et le parfum.</p></li>
   </ol>
 </section>
 
@@ -168,30 +180,40 @@
   </div>
   <div class="famille__liste">
     <article class="membre">
-      <div class="photo img-rv"><img src="img/histoire-daniel.jpg" alt="Daniel Quillot sur le marché" loading="lazy"></div>
+      <div class="photo img-rv"><img src="img/histoire-daniel.jpg" alt="Daniel Quillot sur le marché" loading="lazy" decoding="async" width="1024" height="679"></div>
       <span class="etiquette">Le fondateur</span>
       <h3>Daniel Quillot</h3>
       <p>Il lance la production de canards et d’oies en 1981, fonde la SARL en 1991 et passe le relais en 2021. Les rillettes de sa grand-mère n’ont pas quitté la carte.</p>
     </article>
     <article class="membre">
-      <div class="photo img-rv"><img src="img/marche-thierry.jpg" alt="Thierry au service sur le marché" loading="lazy"></div>
+      <div class="photo img-rv"><img src="img/marche-thierry.jpg" alt="Thierry au service sur le marché" loading="lazy" decoding="async" width="1170" height="1160"></div>
       <span class="etiquette">La nouvelle génération</span>
       <h3>Thierry Batista-Quillot</h3>
       <p>Le neveu de Daniel rejoint l’entreprise en octobre 2024, comme son frère Bertrand avant lui. On le retrouve derrière l’étal, sur les marchés.</p>
     </article>
   </div>
+  <figure class="equipe">
+    <div class="photo equipe__photo img-rv"><img src="img/histoire-equipe.jpg" alt="L’équipe Foie Gras Quillot derrière l’étal, sous la tente d’un marché" loading="lazy" decoding="async" width="1080" height="1350"></div>
+    <figcaption>
+      <span class="etiquette">Toute l’équipe</span>
+      <h3>Derrière l’étal, sur les marchés</h3>
+      <p>Sous la tente, les produits de l’atelier de Casseneuil et ceux qui les font découvrir : foie gras, rillettes, pâtés et conserves, préparés à la main.</p>
+    </figcaption>
+  </figure>
 </section>
 
-<!-- ═════════ CHAMPION ═════════ -->
+<!-- ═════════ PRIX DU PUBLIC ═════════ -->
 <section class="champion sur-fonce" id="champion">
-  <img class="fond" src="img/cassoulet.jpg" alt="" data-par="-60">
-  <div class="badge-sticker" aria-hidden="true"><img src="img/badge-jaune.png" alt=""></div>
+  <img class="champion__fond" src="img/champion-plaque.jpg" alt="La plaque du championnat du monde du cassoulet de Toulouse, prix du public 2026, posée près d’une boîte de cassoulet Quillot" loading="lazy" decoding="async" width="1400" height="1867">
+  <div class="badge-sticker"><img src="img/badge-prix-public.webp" alt="Champion du monde du cassoulet de Toulouse, prix du public 2026" loading="lazy" width="480" height="480"></div>
   <div class="champion__texte">
-    <h2 class="sp">Champion<br>du monde</h2>
-    <div class="champion__cote rv">
-      <span class="etiquette" style="color:var(--jaune)">Toulouse · édition 2026</span>
-      <p>Le public a voté : le cassoulet de la maison Quillot, aux haricots tarbais, a décroché le prix du public au championnat du monde.</p>
-      <a class="btn btn--plein" href="produits.html#voir-cassoulet">Goûter le cassoulet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h17M14 6l6 6-6 6"/></svg></a>
+    <div>
+      <span class="etiquette">Championnat du monde du cassoulet · Toulouse · édition 2026</span>
+      <h2 class="sp">Prix du public</h2>
+    </div>
+    <div class="champion__cote">
+      <p>Le public a voté : le cassoulet de la maison Quillot, aux haricots tarbais, a reçu le prix du public au championnat du monde du cassoulet de Toulouse.</p>
+      <a class="btn btn--plein" href="produit-cassoulet.html">Goûter le cassoulet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg></a>
     </div>
   </div>
 </section>
@@ -199,58 +221,107 @@
 <!-- ═════════ SUITE ═════════ -->
 <section class="suite">
   <a class="suite__lien" href="produits.html">
-    <img src="img/produit-mi-cuit.jpg" alt="" loading="lazy">
+    <img src="img/produit-mi-cuit.jpg" alt="" loading="lazy" decoding="async" width="1600" height="1200">
     <span class="etiquette">La boutique</span>
-    <h2>Nos produits</h2>
+    <h2 class="sp">Nos produits</h2>
   </a>
   <a class="suite__lien" href="recettes.html">
-    <img src="img/toast-foie-gras.jpg" alt="" loading="lazy">
+    <img src="img/toast-foie-gras.jpg" alt="" loading="lazy" decoding="async" width="1600" height="1068">
     <span class="etiquette">À cuisiner</span>
-    <h2>Nos recettes</h2>
+    <h2 class="sp">Nos recettes</h2>
   </a>
 </section>
 </main>
 
 <footer class="contact sur-fonce" id="contact">
-  <div class="contact__haut">
-    <h2 class="sp">Venez <em>nous voir</em></h2>
-    <div class="coordonnees rv">
-      <div><span class="etiquette">Atelier de fabrication</span>1795 route de Bias<br>47440 Casseneuil</div>
-      <div><span class="etiquette">Téléphone</span><a href="tel:0553402800">05 53 40 28 00</a> · <a href="tel:0607323619">06 07 32 36 19</a></div>
-      <div><span class="etiquette">Horaires de l’atelier</span>Du lundi au vendredi, 8h–12h et 14h–17h</div>
+  <div class="contact__grille">
+    <div class="contact__visite">
+      <p class="etiquette">Vous êtes dans le coin ?</p>
+      <h2>Rendez-vous à notre boutique</h2>
+      <address class="coordonnees">
+        <div><span class="etiquette">Atelier et boutique</span>1795 route de Bias<br>47440 Casseneuil</div>
+        <div><span class="etiquette">Horaires</span>Du lundi au vendredi, 8h–12h et 14h–17h</div>
+        <div><span class="etiquette">Téléphone</span><a href="tel:0553402800">05 53 40 28 00</a> · <a href="tel:0607323619">06 07 32 36 19</a></div>
+      </address>
+    </div>
+    <div class="contact__ecrire">
+      <p class="etiquette">Des questions sur nos produits ?</p>
+      <h2>Contactez-nous</h2>
+      <form class="formulaire" data-demo>
+        <label><span>Nom</span><input type="text" name="nom" autocomplete="family-name" required></label>
+        <label><span>Prénom</span><input type="text" name="prenom" autocomplete="given-name"></label>
+        <label class="plein"><span>E-mail</span><input type="email" name="email" autocomplete="email" required></label>
+        <label class="plein"><span>Votre message</span><textarea name="message" required></textarea></label>
+        <label class="consent plein"><input type="checkbox" name="consentement" required><span>J’accepte que ces informations servent à répondre à ma demande. <a href="confidentialite.html">Politique de confidentialité</a></span></label>
+        <input class="piege" type="text" name="site" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn--plein" type="submit">Envoyer</button>
+        <p class="statut plein" role="status" data-statut></p>
+      </form>
     </div>
   </div>
-  <form class="formulaire" action="#" onsubmit="return false">
-    <label><span>Nom</span><input type="text" name="nom" autocomplete="family-name"></label>
-    <label><span>Prénom</span><input type="text" name="prenom" autocomplete="given-name"></label>
-    <label class="plein"><span>E-mail</span><input type="email" name="email" autocomplete="email"></label>
-    <label class="plein"><span>Une question sur nos produits ?</span><textarea name="message"></textarea></label>
-    <button class="btn btn--plein" type="submit">Envoyer <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h17M14 6l6 6-6 6"/></svg></button>
-  </form>
-  <div class="mot-geant" aria-hidden="true">Foie gras Quillot</div>
+  <div class="contact__bas">
+    <div class="contact__lettre">
+      <p class="etiquette">La lettre du terroir</p>
+      <h2>Une recette du terroir dans votre boîte mail</h2>
+      <form class="lettre" data-demo>
+  <div class="lettre__ligne">
+    <label class="lettre__champ"><span class="sr">Votre adresse e-mail</span><input type="email" name="email" placeholder="Votre adresse e-mail" autocomplete="email" required></label>
+    <button class="btn btn--plein" type="submit">Je m’inscris</button>
+  </div>
+  <label class="consent"><input type="checkbox" name="consentement" required><span>J’accepte de recevoir les e-mails de Foie Gras Quillot et je peux me désinscrire à tout moment. <a href="confidentialite.html">Politique de confidentialité</a></span></label>
+  <input class="piege" type="text" name="site" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <p class="statut" role="status" data-statut></p>
+</form>
+
+    </div>
+    <div class="contact__marque">
+      <img class="contact__medaille" src="img/badge-prix-public.webp" alt="Foie Gras Quillot, champion du monde du cassoulet de Toulouse, prix du public 2026" width="480" height="480">
+      <img class="contact__logo" src="img/logo-creme.webp" alt="Foie Gras Quillot" width="240" height="267">
+    </div>
+  </div>
+  <div class="pied">
+    <span>© 2026 Foie Gras Quillot — SAS, Casseneuil</span>
+    <nav aria-label="Informations légales"><a href="mentions-legales.html">Mentions légales</a><a href="cgv.html">C.G.V.</a><a href="confidentialite.html">Politique de confidentialité</a><a href="compte.html">Mon compte</a></nav>
+  </div>
 </footer>
-<div class="pied sur-fonce">
-  <span>© 2026 Foie Gras Quillot — SAS, Casseneuil</span>
-  <nav><a href="#">Mentions légales</a><a href="#">C.G.V.</a><a href="#">Politique de confidentialité</a><a href="#">Mon compte</a></nav>
-</div>
 
 
-<div class="panier" id="panier" aria-hidden="true">
+<div class="panier" id="panier" inert>
   <div class="panier__voile" data-panier-fermer></div>
   <aside class="panier__tiroir" role="dialog" aria-modal="true" aria-labelledby="panier-titre">
     <header class="panier__tete">
       <h2 id="panier-titre">Votre panier</h2>
-      <button class="fermer" type="button" data-panier-fermer aria-label="Fermer le panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+      <button class="fermer" type="button" data-panier-fermer aria-label="Fermer le panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
     </header>
-    <div class="panier__corps" id="panier-corps"></div>
-    <footer class="panier__pied" id="panier-pied"></footer>
+    <div class="panier__corps" id="panier-corps" aria-live="polite"></div>
+    <footer class="panier__pied" id="panier-pied" aria-live="polite"></footer>
   </aside>
 </div>
 
 
-<div class="curseur" id="curseur"><span></span></div>
-<script src="donnees.js"></script>
-<script src="boutique.js"></script>
-<script src="app.js"></script>
+<aside class="invite" id="invite" aria-labelledby="invite-titre" hidden>
+  <button class="fermer fermer--petit" type="button" data-invite-fermer aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  <p class="etiquette">Première visite ?</p>
+  <h2 id="invite-titre">10 % sur votre première commande</h2>
+  <p>Inscrivez-vous : vous recevez votre code, puis de temps en temps une recette du terroir.</p>
+  <form class="lettre" data-demo>
+  <div class="lettre__ligne">
+    <label class="lettre__champ"><span class="sr">Votre adresse e-mail</span><input type="email" name="email" placeholder="Votre adresse e-mail" autocomplete="email" required></label>
+    <button class="btn btn--plein" type="submit">Je m’inscris</button>
+  </div>
+  <label class="consent"><input type="checkbox" name="consentement" required><span>J’accepte de recevoir les e-mails de Foie Gras Quillot et je peux me désinscrire à tout moment. <a href="confidentialite.html">Politique de confidentialité</a></span></label>
+  <input class="piege" type="text" name="site" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <p class="statut" role="status" data-statut></p>
+</form>
+
+</aside>
+
+
+<div class="curseur" id="curseur" aria-hidden="true"><span></span></div>
+
+<script src="donnees.js" defer></script>
+<script src="boutique.js" defer></script>
+<script src="app.js" defer></script>
+
 </body>
 </html>
