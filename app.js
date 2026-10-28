@@ -234,9 +234,31 @@
     const statut = $('[data-statut]', f);
     if (f.elements.site && f.elements.site.value) return;          // champ piège rempli : robot
     if (!f.checkValidity()) { f.reportValidity(); return; }
-    if (statut) statut.textContent = 'Merci ! Version de démonstration : rien n’est envoyé pour le moment.';
+    const m = f.elements.motif, reponse = m ? m.selectedOptions[0].dataset.reponse : '';
+    if (statut) statut.textContent = `Merci ! ${reponse ? reponse + ' ' : ''}Version de démonstration : rien n’est envoyé pour le moment.`;
     f.reset();
   }));
+
+  /* ── Tri des demandes du formulaire de contact : le motif affiche la règle applicable (réponse automatique), demande le numéro de commande et les photos quand ils servent, et renvoie la rétractation vers sa page ── */
+  const motif = $('[data-motif]');
+  if (motif) {
+    const f = motif.form, info = $('[data-motif-info]', f), champCmd = $('[data-champ-commande]', f), champPhotos = $('[data-champ-photos]', f), envoi = $('button[type=submit]', f);
+    const appliquer = () => {
+      const o = motif.selectedOptions[0], retract = o.hasAttribute('data-retractation');
+      info.textContent = o.dataset.reponse || '';
+      info.hidden = !info.textContent;
+      if (retract) info.append(' ', Object.assign(document.createElement('a'), { href: 'retractation.html', textContent: 'Me rétracter' }));
+      champCmd.hidden = !o.hasAttribute('data-commande');
+      $('input', champCmd).required = !champCmd.hidden;
+      champPhotos.hidden = !o.hasAttribute('data-photos');
+      envoi.disabled = retract;
+    };
+    motif.addEventListener('change', appliquer);
+    f.addEventListener('reset', () => setTimeout(appliquer));
+    const url = new URLSearchParams(location.search);
+    if ([...motif.options].some(o => o.value && o.value === url.get('motif'))) { motif.value = url.get('motif'); if (url.get('cmd')) f.elements.commande.value = url.get('cmd'); }
+    appliquer();
+  }
 
   /* ── Invitation à s'inscrire : une seule fois, après 20 s ou 60 % de la page, jamais bloquante ── */
   const invite = $('#invite');

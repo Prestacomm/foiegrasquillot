@@ -184,6 +184,21 @@
         <label><span>Nom</span><input type="text" name="nom" autocomplete="family-name" required></label>
         <label><span>Prénom</span><input type="text" name="prenom" autocomplete="given-name"></label>
         <label class="plein"><span>E-mail</span><input type="email" name="email" autocomplete="email" required></label>
+        <label class="plein"><span>Motif de votre demande</span>
+          <select name="motif" data-motif required>
+            <option value="" data-reponse="">Choisissez un motif</option>
+            <option value="question" data-reponse="Nous vous répondons par e-mail ou par téléphone, du lundi au vendredi (8h–12h, 14h–17h).">Une question sur un produit ou une commande</option>
+            <option value="abime" data-commande data-photos data-reponse="Un colis ou un produit abîmé se signale de préférence sous 48 heures, avec des photos et votre numéro de commande. Gardez les produits dans leur emballage d’origine : nous proposons un remplacement, un complément ou un remboursement. Pour un colis endommagé, formulez aussi des réserves auprès du transporteur et confirmez-les par lettre recommandée dans les 3 jours.">Colis ou produit abîmé</option>
+            <option value="manquant" data-commande data-photos data-reponse="Indiquez les produits manquants ou non conformes, avec des photos et votre numéro de commande, de préférence sous 48 heures. Nous proposons un remplacement, un complément ou un remboursement.">Produit manquant ou non conforme</option>
+            <option value="allergie" data-reponse="Dans le doute, ne consommez pas le produit. Si votre question est urgente, appelez l’atelier au 05 53 40 28 00 : une personne de l’équipe vous répond directement.">Allergie, composition ou conservation d’un produit</option>
+            <option value="modification" data-commande data-reponse="Une commande se modifie ou s’annule tant qu’elle n’est ni préparée ni expédiée. Appelez sans délai le 05 53 40 28 00, puis confirmez par ce formulaire.">Modifier ou annuler une commande</option>
+            <option value="retractation" data-retractation data-reponse="Pour vous rétracter (14 jours après réception), utilisez la page dédiée : elle donne un accusé de réception immédiat.">Me rétracter d’une commande</option>
+            <option value="autre" data-reponse="Nous vous répondons par e-mail ou par téléphone, du lundi au vendredi (8h–12h, 14h–17h).">Autre demande</option>
+          </select>
+        </label>
+        <p class="plein motif-info" role="status" data-motif-info hidden></p>
+        <label class="plein" data-champ-commande hidden><span>Numéro de commande</span><input type="text" name="commande" autocomplete="off" placeholder="Q-20261028-001"></label>
+        <label class="plein" data-champ-photos hidden><span>Photos du colis et des produits (facultatif)</span><input type="file" name="photos" accept="image/*" multiple></label>
         <label class="plein"><span>Votre message</span><textarea name="message" required></textarea></label>
         <label class="consent plein"><input type="checkbox" name="consentement" required><span>J’accepte que ces informations servent à répondre à ma demande. <a href="confidentialite.html">Politique de confidentialité</a></span></label>
         <input class="piege" type="text" name="site" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -214,7 +229,7 @@
   </div>
   <div class="pied">
     <span>© 2026 Foie Gras Quillot — SAS, Casseneuil</span>
-    <nav aria-label="Informations légales"><a href="mentions-legales.html">Mentions légales</a><a href="cgv.html">C.G.V.</a><a href="confidentialite.html">Politique de confidentialité</a><a href="compte.html">Mon compte</a></nav>
+    <nav aria-label="Informations légales"><a href="mentions-legales.html">Mentions légales</a><a href="cgv.html">C.G.V.</a><a href="retractation.html">Me rétracter</a><a href="confidentialite.html">Politique de confidentialité</a><a href="compte.html">Mon compte</a></nav>
   </div>
 </footer>
 

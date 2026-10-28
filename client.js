@@ -4,7 +4,7 @@
 (() => {
   const $ = (s, c = document) => c.querySelector(s);
   const $$ = (s, c = document) => [...c.querySelectorAll(s)];
-  const CLIENT = 'quillot-client', CONNECTE = 'quillot-connecte', COMMANDES = 'quillot-commandes';
+  const CLIENT = 'quillot-client', CONNECTE = 'quillot-connecte', COMMANDES = 'quillot-commandes', RETRACTATIONS = 'quillot-retractations';
   const lire = (k, def) => { try { const v = JSON.parse(localStorage.getItem(k)); return v === null || v === undefined ? def : v; } catch (e) { return def; } };
   const ecrire = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch (e) { return false; } };
   const retirer = k => { try { localStorage.removeItem(k); } catch (e) { /* ignoré */ } };
@@ -33,6 +33,7 @@
         <ul>${c.lignes.map(l => `<li><span>${l.q} × ${esc(l.nom)}${l.format ? ' (' + esc(l.format) + ')' : ''}</span><span>${eur(l.prix * l.q)}</span></li>`).join('')}</ul>
         <p class="commande-ligne__total">Sous-total ${eur(c.st)}${c.remise ? ' · Remise −' + eur(c.remise) : ''} · Livraison ${c.liv ? eur(c.liv) : 'offerte'} · <b>Total TTC ${eur(c.total)}</b></p>
         <p>Livraison : ${esc(c.adresse.prenom)} ${esc(c.adresse.nom)}, ${esc(c.adresse.rue)}${c.adresse.comp ? ', ' + esc(c.adresse.comp) : ''}, ${esc(c.adresse.cp)} ${esc(c.adresse.ville)}. <i>Statut : enregistrée (démonstration).</i></p>
+        <p class="commande-ligne__actions"><a href="index.html?motif=abime&amp;cmd=${encodeURIComponent(c.numero)}#contact">Signaler un problème</a> · <a href="retractation.html?cmd=${encodeURIComponent(c.numero)}">Me rétracter</a></p>
       </details>`).join('') : '<p class="vide">Vous n’avez pas encore passé de commande.</p><a class="btn btn--plein" href="produits.html">Voir les produits</a>';
       return cmds;
     };
@@ -102,11 +103,11 @@
     });
     $('[data-deconnexion]').addEventListener('click', () => { ecrire(CONNECTE, false); location.hash = ''; afficher(); });
     $('[data-export]').addEventListener('click', () => {
-      const blob = new Blob([JSON.stringify({ client: client(), commandes: lire(COMMANDES, []) }, null, 2)], { type: 'application/json' });
+      const blob = new Blob([JSON.stringify({ client: client(), commandes: lire(COMMANDES, []), retractations: lire(RETRACTATIONS, []) }, null, 2)], { type: 'application/json' });
       const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(blob), download: 'mes-donnees-foie-gras-quillot.json' });
       document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
     });
-    $('[data-suppression]').addEventListener('click', () => { [CLIENT, CONNECTE, COMMANDES].forEach(retirer); location.hash = ''; location.reload(); });
+    $('[data-suppression]').addEventListener('click', () => { [CLIENT, CONNECTE, COMMANDES, RETRACTATIONS].forEach(retirer); location.hash = ''; location.reload(); });
     afficher();
   }
 
@@ -169,6 +170,38 @@
       $('[data-merci-compte]').textContent = message;
       $('[data-vue="formulaire"]').hidden = true; $('.compte-demo').hidden = true; $('[data-vue="merci"]').hidden = false;
       scrollTo({ top: 0 });
+    });
+  }
+
+  /* ───────────── Page « Me rétracter » : fonction de rétractation en deux étapes (saisie, puis confirmation), accusé de réception immédiat ───────────── */
+  const formRetractation = $('[data-client="retractation"]');
+  if (formRetractation) {
+    const vues = Object.fromEntries($$('[data-vue]').map(v => [v.dataset.vue, v]));
+    const montrer = (...noms) => { Object.entries(vues).forEach(([n, v]) => { v.hidden = !noms.includes(n); }); };
+    const c0 = client(), url = new URLSearchParams(location.search);
+    if (c0) Object.entries({ prenom: c0.prenom, nom: c0.nom, email: c0.email }).forEach(([k, v]) => { if (v) formRetractation.elements[k].value = v; });
+    if (url.get('cmd')) formRetractation.elements.commande.value = url.get('cmd');
+    let saisie = null;
+    const LIBELLES = [['prenom', 'Prénom'], ['nom', 'Nom'], ['email', 'E-mail'], ['commande', 'Commande'], ['recue', 'Reçue le'], ['produits', 'Produits concernés']];
+    formRetractation.addEventListener('submit', e => {
+      e.preventDefault();
+      if (piege(formRetractation) || !valide(formRetractation)) return;
+      saisie = Object.fromEntries(LIBELLES.map(([k]) => [k, String(valeurs(formRetractation)[k] || '').trim()]));
+      $('[data-resume]').innerHTML = LIBELLES.map(([k, l]) => `<div><dt>${l}</dt><dd>${k === 'recue' && saisie.recue ? esc(date(saisie.recue)) : esc(saisie[k] || (k === 'produits' ? 'Toute la commande' : '—'))}</dd></div>`).join('');
+      montrer('confirmation'); scrollTo({ top: 0 });
+    });
+    $('[data-modifier]').addEventListener('click', () => { montrer('regles', 'formulaire'); scrollTo({ top: 0 }); });
+    $('[data-confirmer]').addEventListener('click', () => {
+      if (!saisie) return;
+      const liste = lire(RETRACTATIONS, []), maintenant = new Date();
+      const reference = `R-${maintenant.toISOString().slice(0, 10).replace(/-/g, '')}-${String(liste.length + 1).padStart(3, '0')}`;
+      liste.push({ reference, date: maintenant.toISOString(), ...saisie });
+      ecrire(RETRACTATIONS, liste);
+      $('[data-accuse-date]').textContent = maintenant.toLocaleString('fr-FR', { dateStyle: 'long', timeStyle: 'short' });
+      $('[data-accuse-reference]').textContent = reference;
+      $('[data-accuse-email]').textContent = saisie.email;
+      $('.compte-demo').hidden = true;
+      montrer('accuse'); scrollTo({ top: 0 });
     });
   }
 })();
