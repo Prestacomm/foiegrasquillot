@@ -141,6 +141,7 @@ body.entete-clair .marque__logo--olive,.entete.is-scrolled .marque__logo--olive{
 .hero:hover .fleche,.fleche:focus-visible{opacity:1;transform:none}
 .fleche:hover{background:var(--jaune);border-color:var(--jaune);color:var(--olive)}
 @media (hover:none){.fleche{opacity:.85;transform:none;width:42px;height:42px;margin-top:-21px}}
+@media (max-width:1000px){.fleche{top:auto;bottom:22px;margin-top:0;width:44px;height:44px;opacity:.9;transform:none}.fleche--g{left:var(--gut)}.fleche--d{right:var(--gut)}}
 
 /* Les sections suivantes glissent par-dessus le hero et la plaque du prix du public */
 main>*:not(.hero):not(.champion):not(.filtres){position:relative;z-index:2}
@@ -588,8 +589,8 @@ main>*:not(.hero):not(.champion):not(.filtres){position:relative;z-index:2}
 .panier__note{font-size:.875rem;background:var(--jaune);border:1px solid var(--olive);border-radius:var(--r-btn);padding:.6em .9em}
 .panier__pied .lien-fleche{justify-self:center}
 body.panier-ouvert{overflow:hidden}
-.toast{position:fixed;left:50%;bottom:24px;z-index:95;transform:translate(-50%,16px);opacity:0;pointer-events:none;display:flex;align-items:center;gap:18px;background:var(--olive);color:var(--creme);padding:.6em .6em .6em 1.2em;border-radius:var(--r-btn);font-weight:700;font-size:.9rem;transition:opacity .3s,transform .4s var(--ease);max-width:calc(100% - 32px)}
-.toast.on{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+.toast{position:fixed;left:16px;right:16px;bottom:max(24px,env(safe-area-inset-bottom));z-index:95;transform:translateY(16px);opacity:0;pointer-events:none;display:flex;align-items:center;justify-content:space-between;gap:18px;width:max-content;max-width:calc(100% - 32px);margin-inline:auto;background:var(--olive);color:var(--creme);padding:.6em .6em .6em 1.2em;border-radius:var(--r-btn);font-weight:700;font-size:.9rem;transition:opacity .3s,transform .4s var(--ease)}
+.toast.on{opacity:1;transform:none;pointer-events:auto}
 .toast button{min-height:44px;padding:0 .8em;color:var(--jaune);text-decoration:underline;white-space:nowrap}
 
 /* ───────── Adaptation ───────── */
@@ -628,6 +629,7 @@ body.panier-ouvert{overflow:hidden}
 @media (max-width:640px){
   .hero{min-height:600px}
   .hero .badge{width:130px;top:120px;right:14px}
+  @media (max-height:700px){.hero .badge{width:96px;top:70px}}
   .cartes,.formulaire{grid-template-columns:1fr}
   .grille{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 12px}
   .produit h3{font-size:17px}
@@ -637,7 +639,8 @@ body.panier-ouvert{overflow:hidden}
   .rayon .photo{aspect-ratio:1/1}
   .etape__photo{grid-column:auto}
   .marche{grid-template-columns:1fr}
-  .marche__tel{justify-self:start}
+  .marche__tel{justify-self:start;display:inline-flex;align-items:center;min-height:44px}
+  .fil a,.pp-recettes a{min-height:44px}
   .jalon{width:78vw}
   .rail .recette-carte{width:72vw}
   .rc-achat__ident{grid-template-columns:76px minmax(0,1fr)}

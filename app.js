@@ -25,6 +25,11 @@
     lastY = y;
   }, { passive: true });
   entete.addEventListener('focusin', () => { entete.classList.remove('is-hidden'); racine.classList.remove('entete-cache'); });
+  /* Retour en arrière ou rechargement : le navigateur rend la position sans événement de défilement */
+  const fondInitial = () => { lastY = scrollY; entete.classList.toggle('is-scrolled', lastY > 60); };
+  fondInitial();
+  addEventListener('pageshow', fondInitial);
+  addEventListener('load', fondInitial);
 
   /* ── Menu mobile ── */
   const burger = $('#burger'), volet = $('#volet');
