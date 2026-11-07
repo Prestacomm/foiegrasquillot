@@ -118,13 +118,6 @@ window.QUILLOT = {
    "url": "produit-foie-gras-canard-truffe.html",
    "prix": 6350
   },
-  "foie-gras-oie-truffe": {
-   "nom": "Foie gras d’oie entier truffé à 10 %",
-   "img": "img/produits/foie-gras-oie-truffe.jpg",
-   "stock": false,
-   "url": "produit-foie-gras-oie-truffe.html",
-   "prix": 7400
-  },
   "pate-foie-canard": {
    "nom": "Pâté de foie de canard",
    "img": "img/produits/pate-foie-canard.jpg",

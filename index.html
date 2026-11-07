@@ -38,7 +38,8 @@
     <a href="histoire.html">Notre histoire</a>
     <a href="produits.html">Nos produits</a>
     <a href="recettes.html">Nos recettes</a>
-    <a href="#contact">Contact</a>
+    <a href="marches.html">Nos marchés</a>
+    <a href="contact.html">Contact</a>
   </nav>
   <div class="entete__outils">
     <button class="pill pill--panier" type="button" data-panier-ouvrir aria-controls="panier">Panier <span class="pill__n" data-panier-n>0</span></button>
@@ -50,7 +51,8 @@
   <a href="histoire.html">Notre histoire</a>
     <a href="produits.html">Nos produits</a>
     <a href="recettes.html">Nos recettes</a>
-    <a href="#contact">Contact</a>
+    <a href="marches.html">Nos marchés</a>
+    <a href="contact.html">Contact</a>
   <div class="volet__bas"><a href="compte.html">Mon compte</a><a href="tel:0553402800">05 53 40 28 00</a></div>
 </nav>
 
@@ -74,7 +76,7 @@
     </div>
   </article>
   <article class="slide" aria-roledescription="diapositive" aria-label="2 sur 3">
-    <img class="slide__img" src="img/hero-confit.jpg" alt="Viande confite sortie de la marmite" loading="lazy" width="1600" height="1067">
+    <img class="slide__img" src="img/hero-championnat.jpg" alt="L’équipe Quillot sur scène avec la plaque du prix du public du championnat du monde du cassoulet de Toulouse, 2026" style="object-position:50% 48%" loading="lazy" width="1066" height="1600">
     <div class="slide__texte">
       <h2 class="grand"><span class="ligne"><span>Prix du</span></span> <span class="ligne"><span>public</span></span></h2>
       <div class="slide__sous">
@@ -88,8 +90,8 @@
     <div class="slide__texte">
       <h2 class="grand"><span class="ligne"><span>Nos marchés</span></span></h2>
       <div class="slide__sous">
-        <p>Andernos, Royan, Soulac, Claouey, Montalivet. Et l’atelier de Casseneuil, du lundi au vendredi.</p>
-        <a class="btn btn--ghost" href="#marches">Où nous trouver <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg></a>
+        <p>Andernos, Royan, Soulac, Claouey, Montalivet. Et l’atelier de Casseneuil, du lundi au dimanche.</p>
+        <a class="btn btn--ghost" href="marches.html">Où nous trouver <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg></a>
       </div>
     </div>
   </article>
@@ -101,7 +103,7 @@
 <!-- ═════════ MANIFESTE ═════════ -->
 <section class="manifeste" id="manifeste">
   <div>
-    <span class="etiquette rv">Maison de famille · Casseneuil</span>
+    <span class="etiquette rv">Maison familiale · Casseneuil</span>
     <h2 class="sp">Élevés et gavés en France, <em>préparés à la main</em> dans notre atelier.</h2>
     <div class="manifeste__texte rv">
       <p>Tout a commencé en 1981 à la ferme des Barrails, quand Daniel Quillot a lancé la production de canards et d’oies. Sa grand-mère lui a transmis la rillette pur canard, une recette que les conserveries modernes ont presque abandonnée.</p>
@@ -110,74 +112,9 @@
     </div>
   </div>
   <div class="manifeste__photos">
-    <div class="photo manifeste__grande img-rv" data-par="-40"><img src="img/toast-foie-gras.jpg" alt="Foie gras et toast sur une assiette" loading="lazy" decoding="async" width="1600" height="1068"></div>
-    <div class="photo manifeste__petite img-rv" data-par="30"><img src="img/histoire-etal-casseneuil.jpg" alt="L’étal Foie Gras Quillot à Casseneuil dans les années 1980" loading="lazy" decoding="async" width="1600" height="1245"></div>
-  </div>
-</section>
-
-<!-- ═════════ HISTOIRE ═════════ -->
-<section class="histoire sur-fonce" id="histoire">
-  <div class="histoire__tete">
-    <div>
-      <h2 class="sp">Une histoire <em>de famille</em></h2>
-      <p class="rv">Plus de quarante ans de marchés, d’atelier et de recettes transmises.</p>
-    </div>
-    <div class="rail-nav" role="group" aria-label="Parcourir la frise">
-      <button type="button" data-rail-prec="rail-histoire" aria-label="Étape précédente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 12H4M10 6l-6 6 6 6"/></svg></button>
-      <button type="button" data-rail-suiv="rail-histoire" aria-label="Étape suivante"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg></button>
-    </div>
-  </div>
-  <div class="rail" id="rail-histoire" data-curseur="Glisser" tabindex="0" role="region" aria-label="Frise de l’histoire de la maison">
-    <article class="jalon">
-      <span class="jalon__annee">1981</span>
-      <h3>La ferme familiale</h3>
-      <p>Daniel, fils de M. et Mme Quillot, démarre la production de canards et d’oies. Les premières ventes se font sur les marchés de Bergerac et de Ribérac.</p>
-      <div class="photo"><img src="img/histoire-marche-noir-blanc.jpg" alt="Marché dans les années 1980" loading="lazy" decoding="async" width="1024" height="624"></div>
-    </article>
-    <article class="jalon">
-      <span class="jalon__annee">1982</span>
-      <h3>La transformation</h3>
-      <p>La ferme des Barrails prépare ses premières conserves. Montalivet d’abord, puis Soulac-sur-Mer en 1983.</p>
-      <div class="photo"><img src="img/histoire-etal-casseneuil.jpg" alt="L’étal de la ferme des Barrails" loading="lazy" decoding="async" width="1600" height="1245"></div>
-    </article>
-    <article class="jalon">
-      <span class="jalon__annee">1991</span>
-      <h3>Le laboratoire</h3>
-      <p>Naissance de la SARL Les Barrails « Foie Gras Quillot » et construction d’un laboratoire aux normes européennes, pour vendre aux restaurateurs et aux magasins.</p>
-    </article>
-    <article class="jalon jalon--photo">
-      <img src="img/histoire-daniel.jpg" alt="Daniel Quillot sur le marché" loading="lazy" decoding="async" width="1024" height="679">
-      <div class="jalon__legende"><span class="jalon__annee">1997</span><h3>Agrément européen</h3></div>
-    </article>
-    <article class="jalon">
-      <span class="jalon__annee">2006</span>
-      <h3>Royan</h3>
-      <p>Le 6 décembre, l’entreprise s’installe sur le marché de Royan. Le marché rouvre le 3 juin 2024 après rénovation.</p>
-      <div class="photo"><img src="img/marche-royan.jpg" alt="Étal de Royan" loading="lazy" decoding="async" width="1024" height="771"></div>
-    </article>
-    <article class="jalon">
-      <span class="jalon__annee">2012</span>
-      <h3>Claouey</h3>
-      <p>Arrivée sur le marché de Claouey, à Lège-Cap-Ferret. En 2018, ce sera celui d’Andernos-les-Bains.</p>
-    </article>
-    <article class="jalon">
-      <span class="jalon__annee">2021</span>
-      <h3>Relais</h3>
-      <p>Daniel prend sa retraite. La SAS Foie Gras Quillot voit le jour, la famille reprend le flambeau.</p>
-      <div class="photo"><img src="img/marche-andernos.jpg" alt="Étal d’Andernos" loading="lazy" decoding="async" width="800" height="600"></div>
-    </article>
-    <article class="jalon jalon--photo">
-      <img src="img/marche-thierry.jpg" alt="Thierry au service sur le marché" loading="lazy" decoding="async" width="1170" height="1160">
-      <div class="jalon__legende"><span class="jalon__annee">2024</span><h3>Thierry rejoint l’atelier</h3></div>
-    </article>
-    <article class="jalon jalon--badge">
-      <span class="jalon__annee">2026</span>
-      <img src="img/badge-olive.webp" alt="Champion du monde du cassoulet de Toulouse, prix du public 2026" loading="lazy" decoding="async" width="440" height="274">
-    </article>
-  </div>
-  <div class="histoire__pied">
-    <div class="progres" aria-hidden="true"><i id="progres-histoire"></i></div>
-    <a class="btn btn--ghost" href="histoire.html">Lire toute l’histoire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg></a>
+    <div class="photo manifeste__equipe img-rv"><img src="img/histoire-equipe.jpg" alt="L’équipe Foie Gras Quillot derrière son étal, sur un marché" loading="lazy" decoding="async" width="1080" height="1350"></div>
+    <div class="photo manifeste__produit img-rv"><img src="img/produits/foie-gras-canard-entier.jpg" alt="Bocal de foie gras de canard Quillot, avec du pain et du vin dans un panier de pique-nique" loading="lazy" decoding="async" width="900" height="900"></div>
+    <div class="photo manifeste__etal img-rv"><img src="img/histoire-etal-casseneuil.jpg" alt="L’étal Foie Gras Quillot à Casseneuil dans les années 1980" loading="lazy" decoding="async" width="1600" height="1245"></div>
   </div>
 </section>
 
@@ -203,56 +140,9 @@
       <div class="photo"><img src="img/produits/confit-canard.jpg" alt="" loading="lazy" decoding="async" width="900" height="900"></div>
       <h3>Confits</h3><span>4 produits</span>
     </a>
-    <a class="rayon rv" href="produits.html#produits-frais">
-      <div class="photo"><img src="img/marche-andernos-charcuterie.jpg" alt="" loading="lazy" decoding="async" width="1024" height="771"></div>
-      <h3>Produits frais</h3><span>3 produits</span>
-    </a>
     <a class="rayon rv" href="produits.html#plats-cuisines">
       <div class="photo"><img src="img/produits/cassoulet.jpg" alt="" loading="lazy" decoding="async" width="900" height="900"></div>
       <h3>Plats cuisinés</h3><span>8 produits</span>
-    </a>
-    <a class="rayon rv" href="produits.html#truffes">
-      <div class="photo"><img src="img/toast-foie-gras.jpg" alt="" loading="lazy" decoding="async" width="1600" height="1068"></div>
-      <h3>Truffes</h3><span>1 produit</span>
-    </a>
-    <a class="rayon rv" href="produits.html#idees-cadeaux">
-      <div class="photo"><img src="img/produit-coffret.jpg" alt="" loading="lazy" decoding="async" width="1600" height="1200"></div>
-      <h3>Idées cadeaux</h3><span>1 produit</span>
-    </a>
-    <a class="rayon rayon--tout rv" href="produits.html">
-      <div class="photo"><span>Toute la boutique <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg></span></div>
-      <h3>Tous les produits</h3><span>30 disponibles</span>
-    </a>
-  </div>
-</section>
-
-<section class="incontournables">
-  <div class="incontournables__tete">
-    <h2 class="sp">Les <em>incontournables</em></h2>
-    <a class="btn btn--ghost" href="produits.html">Toute la boutique <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg></a>
-  </div>
-  <div class="cartes">
-    <a class="carte carte--grande rv" href="produit-foie-gras-canard-entier.html">
-      <div class="photo"><img src="img/produits/foie-gras-canard-entier.jpg" alt="Foie gras de canard entier" loading="lazy" decoding="async" width="900" height="900"></div>
-      <span class="etiquette">Le grand classique</span>
-      <div class="carte__ligne"><h3>Foie gras de canard entier</h3><span class="carte__prix">dès 19,80 €</span></div>
-      <p>En boîte ou en bocal, selon le poids. À sortir du frais une heure avant de servir.</p>
-    </a>
-    <a class="carte rv" href="produit-foie-gras-canard-mi-cuit.html">
-      <div class="photo"><img src="img/produits/foie-gras-canard-mi-cuit.jpg" alt="Foie gras de canard mi-cuit" loading="lazy" decoding="async" width="900" height="900"></div>
-      <div class="carte__ligne"><h3>Foie gras de canard mi-cuit</h3><span class="carte__prix">dès 31,60 €</span></div>
-    </a>
-    <a class="carte rv" href="produit-grattons.html">
-      <div class="photo"><img src="img/produits/grattons.jpg" alt="Grattons de canard" loading="lazy" decoding="async" width="900" height="900"></div>
-      <div class="carte__ligne"><h3>Grattons de canard</h3><span class="carte__prix">7,50 €</span></div>
-    </a>
-    <a class="carte rv" href="produit-rillettes-canard.html">
-      <div class="photo"><img src="img/produit-rillettes.jpg" alt="Rillettes pur canard" loading="lazy" decoding="async" width="1600" height="900"></div>
-      <div class="carte__ligne"><h3>Rillettes pur canard</h3><span class="carte__prix">18,50 €</span></div>
-    </a>
-    <a class="carte rv" href="produit-cassoulet.html">
-      <div class="photo"><img src="img/produits/cassoulet.jpg" alt="Cassoulet aux haricots tarbais" loading="lazy" decoding="async" width="900" height="900"></div>
-      <div class="carte__ligne"><h3>Cassoulet aux haricots tarbais</h3><span class="carte__prix">39,60 €</span></div>
     </a>
   </div>
 </section>
@@ -272,43 +162,6 @@
     </div>
   </div>
 </section>
-
-<!-- ═════════ MARCHÉS ═════════ -->
-<section class="marches" id="marches">
-  <div class="marches__titre">
-    <span class="etiquette">Où nous trouver</span>
-    <h2 class="sp">Les <em>marchés</em> et l’atelier</h2>
-    <p class="rv">Du Bassin d’Arcachon à Royan, on vous attend derrière l’étal. Pour une commande ou une question, appelez directement le point de vente.</p>
-  </div>
-  <div class="liste-marches">
-    <article class="marche" data-img="img/marche-soulac.jpg">
-      <h3>Soulac-sur-Mer</h3><a class="marche__tel" href="tel:0556736059">05 56 73 60 59</a>
-      <div class="marche__infos"><p><b>Ouvert</b> toute l’année, le matin, du mardi au dimanche</p><p><b>Été</b> tous les jours en juillet-août, plus les soirs de 18h à 20h</p></div>
-    </article>
-    <article class="marche" data-img="img/marche-royan.jpg">
-      <h3>Royan</h3><a class="marche__tel" href="tel:0546385867">05 46 38 58 67</a>
-      <div class="marche__infos"><p><b>Ouvert</b> toute l’année, de 8h à 13h, sauf le lundi</p></div>
-    </article>
-    <article class="marche" data-img="img/marche-andernos.jpg">
-      <h3>Andernos-les-Bains</h3><span class="marche__tel">Marché municipal</span>
-      <div class="marche__infos"><p><b>Ouvert</b> toute l’année, le matin, du mardi au dimanche</p><p><b>Été</b> tous les jours en juillet, août et septembre, plus les soirs de 18h à 20h</p></div>
-    </article>
-    <article class="marche" data-img="img/histoire-stand.jpg">
-      <h3>Claouey</h3><span class="marche__tel">Lège-Cap-Ferret</span>
-      <div class="marche__infos"><p><b>Ouvert</b> tous les matins, de mi-juin à mi-septembre</p></div>
-    </article>
-    <article class="marche" data-img="img/histoire-marche-noir-blanc.jpg">
-      <h3>Montalivet</h3><a class="marche__tel" href="tel:0556736059">05 56 73 60 59</a>
-      <div class="marche__infos"><p><b>Ouvert</b> tous les matins en juillet et en août</p></div>
-    </article>
-    <article class="marche marche--atelier" data-img="img/histoire-etal-casseneuil.jpg">
-      <h3>Casseneuil <small>Atelier</small></h3><a class="marche__tel" href="tel:0553402800">05 53 40 28 00</a>
-      <div class="marche__infos"><p>1795 route de Bias, 47440 Casseneuil</p><p><b>Ouvert</b> du lundi au vendredi, 8h–12h et 14h–17h</p></div>
-    </article>
-  </div>
-</section>
-
-<div class="survol" id="survol" aria-hidden="true"></div>
 
 <!-- ═════════ RECETTES ═════════ -->
 <section class="recettes-accueil" id="recettes">
@@ -385,47 +238,28 @@
 </main>
 
 <footer class="contact sur-fonce" id="contact">
-  <div class="contact__grille">
+  <div class="contact__haut">
     <div class="contact__visite">
       <p class="etiquette">Vous êtes dans le coin ?</p>
       <h2>Rendez-vous à notre boutique</h2>
-      <address class="coordonnees">
+    </div>
+    <div class="contact__marque">
+      <img class="contact__medaille" src="img/badge-prix-public.webp" alt="Foie Gras Quillot, champion du monde du cassoulet de Toulouse, prix du public 2026" width="480" height="480">
+      <img class="contact__logo" src="img/logo-creme.webp" alt="Foie Gras Quillot" width="240" height="267">
+    </div>
+  </div>
+  <address class="coordonnees">
         <div><span class="etiquette">Atelier et boutique</span>1795 route de Bias<br>47440 Casseneuil</div>
         <div><span class="etiquette">Horaires</span>Du lundi au vendredi, 8h–12h et 14h–17h</div>
         <div><span class="etiquette">Téléphone</span><a href="tel:0553402800">05 53 40 28 00</a> · <a href="tel:0607323619">06 07 32 36 19</a></div>
       </address>
-    </div>
-    <div class="contact__ecrire">
+  <div class="contact__bas">
+    <div class="contact__ecrire contact__cta">
       <p class="etiquette">Des questions sur nos produits ?</p>
       <h2>Contactez-nous</h2>
-      <form class="formulaire" data-demo>
-        <label><span>Nom</span><input type="text" name="nom" autocomplete="family-name" required></label>
-        <label><span>Prénom</span><input type="text" name="prenom" autocomplete="given-name"></label>
-        <label class="plein"><span>E-mail</span><input type="email" name="email" autocomplete="email" required></label>
-        <label class="plein"><span>Motif de votre demande</span>
-          <select name="motif" data-motif required>
-            <option value="" data-reponse="">Choisissez un motif</option>
-            <option value="question" data-reponse="Nous vous répondons par e-mail ou par téléphone, du lundi au vendredi (8h–12h, 14h–17h).">Une question sur un produit ou une commande</option>
-            <option value="abime" data-commande data-photos data-reponse="Un colis ou un produit abîmé se signale de préférence sous 48 heures, avec des photos et votre numéro de commande. Gardez les produits dans leur emballage d’origine : nous proposons un remplacement, un complément ou un remboursement. Pour un colis endommagé, formulez aussi des réserves auprès du transporteur et confirmez-les par lettre recommandée dans les 3 jours.">Colis ou produit abîmé</option>
-            <option value="manquant" data-commande data-photos data-reponse="Indiquez les produits manquants ou non conformes, avec des photos et votre numéro de commande, de préférence sous 48 heures. Nous proposons un remplacement, un complément ou un remboursement.">Produit manquant ou non conforme</option>
-            <option value="allergie" data-reponse="Dans le doute, ne consommez pas le produit. Si votre question est urgente, appelez l’atelier au 05 53 40 28 00 : une personne de l’équipe vous répond directement.">Allergie, composition ou conservation d’un produit</option>
-            <option value="modification" data-commande data-reponse="Une commande se modifie ou s’annule tant qu’elle n’est ni préparée ni expédiée. Appelez sans délai le 05 53 40 28 00, puis confirmez par ce formulaire.">Modifier ou annuler une commande</option>
-            <option value="retractation" data-retractation data-reponse="Pour vous rétracter (14 jours après réception), utilisez la page dédiée : elle donne un accusé de réception immédiat.">Me rétracter d’une commande</option>
-            <option value="autre" data-reponse="Nous vous répondons par e-mail ou par téléphone, du lundi au vendredi (8h–12h, 14h–17h).">Autre demande</option>
-          </select>
-        </label>
-        <p class="plein motif-info" role="status" data-motif-info hidden></p>
-        <label class="plein" data-champ-commande hidden><span>Numéro de commande</span><input type="text" name="commande" autocomplete="off" placeholder="Q-20261028-001"></label>
-        <label class="plein" data-champ-photos hidden><span>Photos du colis et des produits (facultatif)</span><input type="file" name="photos" accept="image/*" multiple></label>
-        <label class="plein"><span>Votre message</span><textarea name="message" required></textarea></label>
-        <label class="consent plein"><input type="checkbox" name="consentement" required><span>J’accepte que ces informations servent à répondre à ma demande. <a href="confidentialite.html">Politique de confidentialité</a></span></label>
-        <input class="piege" type="text" name="site" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <button class="btn btn--plein" type="submit">Envoyer</button>
-        <p class="statut plein" role="status" data-statut></p>
-      </form>
+      <p>Une question sur un produit, un colis abîmé, une commande à modifier : écrivez-nous, nous répondons du lundi au vendredi.</p>
+      <a class="btn btn--plein" href="contact.html">Nous écrire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg></a>
     </div>
-  </div>
-  <div class="contact__bas">
     <div class="contact__lettre">
       <p class="etiquette">La lettre du terroir</p>
       <h2>Une recette du terroir dans votre boîte mail</h2>
@@ -439,10 +273,6 @@
   <p class="statut" role="status" data-statut></p>
 </form>
 
-    </div>
-    <div class="contact__marque">
-      <img class="contact__medaille" src="img/badge-prix-public.webp" alt="Foie Gras Quillot, champion du monde du cassoulet de Toulouse, prix du public 2026" width="480" height="480">
-      <img class="contact__logo" src="img/logo-creme.webp" alt="Foie Gras Quillot" width="240" height="267">
     </div>
   </div>
   <div class="pied">

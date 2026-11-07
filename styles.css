@@ -152,40 +152,22 @@ main>*:not(.hero):not(.champion):not(.filtres){position:relative;z-index:2}
 .manifeste h2{font-size:clamp(32px,4.2vw,64px)}
 .manifeste__texte{margin-top:clamp(24px,3vw,44px);max-width:46ch;display:grid;gap:1.1em}
 .manifeste__texte .lien-fleche{justify-self:start}
-.manifeste__photos{position:relative;padding-bottom:18%}
+.manifeste__photos{display:grid;grid-template-columns:1fr 1fr;gap:clamp(10px,1.2vw,18px)}   /* l'équipe en bandeau, puis le produit et l'étal d'autrefois */
 .photo{border-radius:var(--r-img);overflow:hidden;position:relative}
 .photo img{width:100%;height:100%;object-fit:cover}
-.manifeste__grande{aspect-ratio:4/5}
-.manifeste__grande img{object-position:38% 62%}
-.manifeste__petite img{object-position:50% 40%}
+.manifeste__equipe{grid-column:1/-1;aspect-ratio:4/3}
+.manifeste__equipe img{object-position:50% 42%}
+.manifeste__produit,.manifeste__etal{aspect-ratio:1/1}
+.manifeste__etal img{object-position:50% 20%}
 .badge-sticker img{width:100%;height:auto}
-.manifeste__petite{position:absolute;width:50%;aspect-ratio:1/1;right:-6%;bottom:0;border:1px solid var(--olive);background:var(--creme)}
 
 /* ───────── Histoire (bande bordeaux) ───────── */
-.histoire{background:var(--bordeaux);color:var(--creme);padding:clamp(64px,8vw,120px) 0 clamp(56px,7vw,100px)}
-.histoire__tete{padding:0 var(--gut);display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(32px,4vw,56px)}
-.histoire h2,.recettes-accueil h2{font-size:clamp(32px,4.2vw,64px)}
-.histoire__tete p{margin-top:12px;max-width:34ch}
+.recettes-accueil h2{font-size:clamp(32px,4.2vw,64px)}
 .rail{cursor:grab;display:flex;gap:clamp(14px,1.6vw,26px);overflow-x:auto;scroll-snap-type:x proximity;padding:0 var(--gut) 10px;scrollbar-width:none;scroll-padding-inline:var(--gut)}
 .rail::-webkit-scrollbar{display:none}
 .rail:focus-visible{outline-offset:-3px}
 .rail.is-drag{cursor:grabbing;scroll-snap-type:none}
 .rail.is-drag *{pointer-events:none}
-.jalon{flex:none;width:clamp(270px,28vw,440px);scroll-snap-align:start;border:1px solid rgba(255,250,245,.55);border-radius:var(--r-img);padding:clamp(20px,2vw,30px);display:flex;flex-direction:column;gap:16px;min-height:clamp(400px,38vw,580px);transition:background-color .5s var(--ease)}
-.jalon:hover{background:rgba(255,250,245,.07)}
-.jalon__annee{font-family:var(--f-titre);font-weight:700;font-size:clamp(48px,5vw,80px);line-height:1;letter-spacing:-.04em;color:var(--jaune)}
-.jalon h3{font-size:clamp(20px,1.6vw,26px)}
-.jalon p{font-size:.95rem}
-.jalon .photo{margin-top:auto;aspect-ratio:3/2}
-.jalon--photo{padding:0;overflow:hidden;position:relative;border-color:transparent}
-.jalon--photo>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.jalon__legende{position:absolute;left:0;right:0;bottom:0;padding:22px;background:linear-gradient(0deg,rgba(60,15,15,.85),transparent);z-index:2}
-.jalon--badge,.jalon--badge:hover{background:var(--creme);color:var(--olive);align-items:center;justify-content:center;text-align:center}
-.jalon--badge .jalon__annee{color:var(--bordeaux)}
-.jalon--badge img{width:62%;height:auto}
-.histoire__pied{padding:clamp(24px,3vw,40px) var(--gut) 0;display:flex;justify-content:space-between;align-items:center;gap:20px}
-.progres{flex:1;max-width:520px;height:1px;background:rgba(255,250,245,.3);position:relative}
-.progres i{position:absolute;left:0;top:-1px;height:3px;width:20%;background:var(--jaune);transform-origin:left}
 
 /* ───────── Rayons et sélection ───────── */
 .rayons{background:var(--jaune);border-bottom:1px solid var(--olive);padding:clamp(70px,9vw,130px) var(--gut)}
@@ -202,10 +184,6 @@ main>*:not(.hero):not(.champion):not(.filtres){position:relative;z-index:2}
 .rayon .photo{aspect-ratio:4/5;background:var(--creme);margin-bottom:10px}
 .rayon .photo img,.carte .photo img,.produit .photo img:not(.produit__champion),.recette-carte__photo img,.suite__lien img{transition:transform 1.1s var(--ease)}
 .rayon:hover .photo img,.carte:hover .photo img,.produit:hover .photo img:not(.produit__champion),.recette-carte:hover .recette-carte__photo img,.suite__lien:hover img{transform:scale(1.07)}
-.rayon--tout .photo{background:var(--bordeaux);color:var(--jaune);display:grid;place-items:center;padding:20px;transition:background-color .25s}
-.rayon--tout:hover .photo{background:var(--olive)}
-.rayon--tout .photo span{display:inline-flex;align-items:center;gap:.6em;font-family:var(--f-titre);font-weight:700;font-size:clamp(20px,2vw,30px);letter-spacing:-.03em;line-height:1.1;text-align:center}
-.rayon--tout .photo svg{width:1.1em;flex:none}
 .rayon h3{font-size:clamp(20px,1.7vw,26px)}
 .rayon span{font-size:.9rem;opacity:.8}
 .incontournables{background:var(--creme);padding:clamp(70px,9vw,130px) var(--gut)}
@@ -231,7 +209,8 @@ main>*:not(.hero):not(.champion):not(.filtres){position:relative;z-index:2}
 /* ───────── Marchés ───────── */
 .marches{background:var(--creme);padding:clamp(70px,9vw,130px) var(--gut);display:grid;grid-template-columns:minmax(0,4.4fr) minmax(0,7.6fr);gap:clamp(30px,5vw,90px);align-items:start}
 .marches__titre{position:sticky;top:calc(var(--haut) + 24px)}
-.marches h2{font-size:clamp(32px,4.2vw,64px);margin-top:12px}
+.marches h1,.marches h2{font-size:clamp(32px,4.2vw,64px);margin-top:12px}
+.marches--page{padding-top:calc(var(--h-entete) + clamp(28px,4vw,64px))}
 .marches__titre p{margin-top:22px;max-width:34ch}
 .liste-marches{border-top:1px solid var(--olive)}
 .marche{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 24px;padding:clamp(18px,2vw,28px) 0;border-bottom:1px solid var(--olive);transition:padding .5s var(--ease),background-color .4s}
@@ -241,6 +220,28 @@ main>*:not(.hero):not(.champion):not(.filtres){position:relative;z-index:2}
 .marche__tel{font-weight:700;align-self:center;white-space:nowrap}
 .marche__infos{grid-column:1/-1;display:grid;gap:2px;font-size:1rem}
 .marche__infos b{font-weight:700;color:var(--bordeaux);margin-right:.35em}
+.marche__infos .lien-fleche{justify-self:start;margin-top:4px;color:var(--bordeaux)}
+
+/* Page Nos marchés : carrousel de boîtes d'allumettes (site/marches.js). Sans JavaScript, la liste ci-dessus reste affichée. */
+.marches--page.a-boites{display:block}
+.marches--page.a-boites .marches__titre{position:static;max-width:62ch;margin-bottom:clamp(28px,4vw,56px)}
+.marches--page.a-boites .liste-marches{display:none}
+.boites{display:grid;gap:clamp(20px,2.6vw,36px)}
+.boites__fiche .marche{border-top:1px solid var(--olive)}
+.boites__fiche .marche:hover{padding-inline:0;background:none}
+.mbx{position:relative;width:100%;overflow:hidden;background:var(--paille);border:1px solid var(--olive);border-radius:var(--r-img);touch-action:pan-y;user-select:none;-webkit-user-select:none;outline:none;-webkit-tap-highlight-color:transparent;font-family:var(--f-titre)}
+.mbx:focus-visible{outline:2px solid var(--bordeaux);outline-offset:3px}
+.mbx__voile{position:absolute;inset:0;pointer-events:none;background:radial-gradient(90% 70% at 50% 42%,rgba(255,250,245,.45),transparent 70%),radial-gradient(140% 100% at 50% 50%,transparent 55%,rgba(82,73,32,.12))}
+.mbx__scene{position:absolute;inset:0;perspective-origin:50% 20%}
+.mbx__ancre{position:absolute;left:0;width:0;height:0;transform-style:preserve-3d}
+.mbx img{-webkit-user-drag:none;user-select:none}
+.mbx__cmd{position:absolute;z-index:5;left:50%;bottom:clamp(12px,3.4%,28px);transform:translateX(-50%);display:flex;align-items:center;gap:10px;color:var(--olive)}
+.mbx__compteur{font-size:.8125rem;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:.06em;margin-right:6px;white-space:nowrap}
+.mbx__compteur span{opacity:.5}
+.mbx__btn{width:44px;height:44px;border:1px solid var(--olive);border-radius:50%;display:grid;place-items:center;background:var(--creme);transition:background-color .25s,color .25s}
+.mbx__btn:hover{background:var(--olive);color:var(--creme)}
+.mbx__btn:active{transform:scale(.96)}
+@media (hover:hover){.mbx-boite:not(.mbx-actif):hover .mbx-tiroir{transform:translate3d(6%,0,0)!important}}
 
 /* ───────── Recettes de l'accueil ───────── */
 .recettes-accueil{background:var(--paille);border-block:1px solid var(--olive);padding:clamp(60px,8vw,120px) 0 clamp(56px,7vw,100px)}
@@ -253,8 +254,8 @@ main>*:not(.hero):not(.champion):not(.filtres){position:relative;z-index:2}
 /* ───────── Contact et pied de page ───────── */
 .contact{position:relative;z-index:2;background:var(--olive);color:var(--creme);padding:clamp(64px,8vw,120px) var(--gut) 0}
 .contact h2{font-size:clamp(28px,3.4vw,50px);margin-top:10px}
-.contact__grille{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,110px);align-items:start}
-.coordonnees{display:grid;gap:18px;font-style:normal;margin-top:clamp(24px,3vw,40px)}
+.contact__haut{display:flex;justify-content:space-between;align-items:flex-end;gap:24px clamp(24px,4vw,60px);flex-wrap:wrap}
+.coordonnees{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px clamp(20px,3vw,48px);font-style:normal;margin-top:clamp(28px,3.4vw,48px)}
 .coordonnees div{border-top:1px solid rgba(255,250,245,.4);padding-top:12px}
 .coordonnees .etiquette{margin-bottom:6px}
 .coordonnees a{display:inline-flex;align-items:center;min-height:44px}
@@ -269,7 +270,7 @@ main>*:not(.hero):not(.champion):not(.filtres){position:relative;z-index:2}
 .formulaire select:focus-visible{border-bottom-width:2px}
 .formulaire select option{color:var(--olive);background:var(--creme)}
 .formulaire input[type=file]{font-size:.9rem;padding:.7em 0}
-.formulaire [hidden]{display:none}
+.formulaire [hidden],.formulaire label[hidden]{display:none}
 .motif-info{font-size:.9rem;line-height:1.5;border-left:3px solid var(--jaune);padding-left:12px}
 .motif-info a{text-decoration:underline;text-underline-offset:3px;font-weight:700}
 .formulaire ::placeholder,.lettre__champ ::placeholder{color:inherit;opacity:.6}
@@ -280,9 +281,19 @@ main>*:not(.hero):not(.champion):not(.filtres){position:relative;z-index:2}
 .consent a{text-decoration:underline}
 .piege{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 .statut{font-size:.95rem;font-weight:700;min-height:1.4em}
-.contact__bas{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,6vw,110px);align-items:center;margin-top:clamp(48px,6vw,90px);padding-top:clamp(32px,4vw,56px);border-top:1px solid rgba(255,250,245,.3)}
-.contact__lettre h2{margin-bottom:20px;max-width:20ch}
-.contact__marque{display:flex;align-items:center;justify-content:flex-end;gap:clamp(20px,3vw,40px)}
+.contact__cta p:not(.etiquette){margin-top:14px;max-width:44ch}
+.contact__cta .btn{margin-top:20px}
+body[data-page="contact"] .contact__cta{display:none}   /* sur la page Contact, le formulaire est déjà là */
+.contact-page{background:var(--creme);padding:clamp(24px,3vw,44px) var(--gut) clamp(64px,8vw,120px)}
+.contact-page .formulaire{max-width:860px;margin-top:0}
+.contact-page .formulaire label:not(.consent)>span{color:var(--bordeaux)}
+.contact-page .formulaire select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8' fill='none' stroke='%23524920' stroke-width='1.6'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E")}
+.contact-page .motif-info{border-left-color:var(--bordeaux)}
+.contact__bas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,3vw,48px);margin-top:clamp(36px,4.4vw,64px)}
+.contact__bas>div{border-top:1px solid rgba(255,250,245,.4);padding-top:clamp(16px,2vw,24px)}
+body[data-page="contact"] .contact__bas{grid-template-columns:1fr;max-width:640px}
+.contact__lettre h2{margin-bottom:20px;max-width:22ch}
+.contact__marque{display:flex;align-items:center;gap:clamp(20px,3vw,40px)}
 .contact__medaille{width:clamp(120px,13vw,190px);height:auto}
 .contact__logo{width:clamp(70px,7vw,100px);height:auto}
 .lettre{display:grid;gap:14px}
@@ -342,6 +353,7 @@ main>*:not(.hero):not(.champion):not(.filtres){position:relative;z-index:2}
 .services span{font-size:.95rem}
 .ph--photo{height:calc(100svh - 34px);min-height:560px;background:var(--olive);color:var(--creme);overflow:hidden;display:flex;align-items:flex-end}
 .ph__fond{position:absolute;inset:-8% 0;width:100%;height:116%;object-fit:cover}
+.ph__fond--tetes{inset:-3% 0;height:106%;object-position:50% 0}   /* photo d'époque : les visages sont tout en haut du cliché, on cale le cadrage sur le haut */
 .ph--photo::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(32,29,10,.86),rgba(32,29,10,.45) 45%,rgba(32,29,10,.1) 75%),linear-gradient(180deg,rgba(32,29,10,.45),rgba(32,29,10,0) 24%)}
 .ph__texte{position:relative;z-index:2;padding:0 var(--gut) clamp(36px,6vw,80px);width:100%;display:grid;gap:clamp(12px,1.6vw,20px);justify-items:start}
 .ph--photo h1{font-size:clamp(44px,7vw,108px);line-height:1;color:var(--jaune)}
@@ -363,11 +375,11 @@ main>*:not(.hero):not(.champion):not(.filtres){position:relative;z-index:2}
 .frise__liste{border-top:1px solid var(--olive)}
 .etape{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,5fr) minmax(0,4fr);gap:clamp(16px,3vw,56px);align-items:start;padding:clamp(22px,3vw,44px) 0;border-bottom:1px solid var(--olive);transition:background-color .4s,padding .5s var(--ease)}
 .etape:hover{background:var(--creme);padding-inline:clamp(12px,1.6vw,24px)}
-.etape__annee{font-family:var(--f-titre);font-weight:700;font-size:clamp(44px,5.6vw,88px);line-height:1;letter-spacing:-.04em;color:var(--bordeaux)}
-.etape__annee small{font-size:.5em;letter-spacing:-.03em}
+.etape__annee{font-family:var(--f-titre);font-weight:700;font-size:clamp(40px,4.4vw,68px);white-space:nowrap;line-height:1;letter-spacing:-.04em;color:var(--bordeaux)}
 .etape h3{font-size:clamp(22px,2.2vw,34px);margin-bottom:.5em}
 .etape__texte{max-width:46ch}
 .etape__photo{grid-column:3;aspect-ratio:4/3;background:var(--creme)}
+.etape__legende{grid-column:3;margin-top:calc(10px - clamp(16px,3vw,56px));font-size:.875rem;line-height:1.45}   /* sous la photo : le gap de la grille est repris */
 .savoir{background:var(--jaune);border-bottom:1px solid var(--olive);padding:clamp(60px,8vw,120px) var(--gut)}
 .savoir .etiquette{margin-bottom:clamp(14px,1.8vw,22px)}
 .savoir h2{max-width:17em}
@@ -394,7 +406,7 @@ main>*:not(.hero):not(.champion):not(.filtres){position:relative;z-index:2}
 .suite__lien{position:relative;display:flex;flex-direction:column;justify-content:flex-end;gap:10px;min-height:clamp(240px,30vw,440px);padding:clamp(22px,3vw,40px);border:1px solid var(--olive);border-radius:var(--r-img);overflow:hidden;color:var(--creme)}
 .suite--un .suite__lien{min-height:clamp(200px,24vw,340px)}
 .suite__lien img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.suite__lien::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(32,29,10,.86),rgba(32,29,10,.5) 55%,rgba(32,29,10,.3))}
+.suite__lien::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(32,29,10,.9),rgba(32,29,10,.68) 55%,rgba(32,29,10,.42))}
 .suite__lien>*{position:relative;z-index:2}
 .suite__lien h2{font-size:clamp(34px,5vw,76px);line-height:1;color:var(--jaune)}
 .suite__lien .etiquette{color:var(--creme)}
@@ -477,6 +489,9 @@ main>*:not(.hero):not(.champion):not(.filtres){position:relative;z-index:2}
 .infos div{display:grid;grid-template-columns:minmax(140px,1fr) 3fr;gap:6px 24px;padding:14px 0;border-bottom:1px solid rgba(82,73,32,.35)}
 .infos dt{font-weight:700}
 .a-renseigner{font-style:italic;opacity:.65}
+.pp-detail{max-width:72ch;margin-bottom:clamp(32px,4vw,56px)}
+.pp-detail p{margin-top:1em}
+.infos dd p+p{margin-top:.6em}
 .pp-voisins{padding:clamp(40px,5vw,72px) var(--gut) clamp(60px,8vw,110px);background:var(--paille);border-top:1px solid var(--olive)}
 
 /* Recettes : liste */
@@ -599,10 +614,7 @@ body.panier-ouvert{overflow:hidden}
   .burger{display:block}
 }
 @media (max-width:1000px){
-  .manifeste,.marches,.contact__grille,.contact__bas,.hi-intro,.ph--clair,.lettre-bloc,.pp-corps{grid-template-columns:1fr;align-items:start}
-  .manifeste__photos{max-width:none;padding-bottom:12%}
-  .manifeste__grande{aspect-ratio:4/3}
-  .manifeste__petite{width:42%;aspect-ratio:4/3;right:4%}
+  .manifeste,.marches,.contact__bas,.hi-intro,.ph--clair,.lettre-bloc,.pp-corps{grid-template-columns:1fr;align-items:start}
   .marches__titre,.pp-photo{position:static}
   .rayons__grille{grid-template-columns:repeat(2,minmax(0,1fr))}
   .cartes{grid-template-columns:1fr 1fr}
@@ -612,9 +624,10 @@ body.panier-ouvert{overflow:hidden}
   .champion__fond{grid-column:1;aspect-ratio:4/3;height:auto;object-position:50% 30%}
   .champion__texte{grid-column:1;grid-row:2;padding-top:clamp(36px,6vw,64px)}
   .champion .badge-sticker{left:auto;right:var(--gut);top:clamp(90px,14vh,150px)}
-  .contact__marque{justify-content:flex-start}
+  .coordonnees{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .coordonnees div:last-child{grid-column:1/-1}
   .etape{grid-template-columns:minmax(0,1fr) minmax(0,3fr)}
-  .etape__photo{grid-column:2}
+  .etape__photo,.etape__legende{grid-column:2}
   .savoir__pas{grid-template-columns:repeat(2,minmax(0,1fr))}
   .famille__liste,.suite,.promesses,.equipe{grid-template-columns:1fr}
   .grille-recettes{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -630,18 +643,17 @@ body.panier-ouvert{overflow:hidden}
   .hero{min-height:600px}
   .hero .badge{width:130px;top:120px;right:14px}
   @media (max-height:700px){.hero .badge{width:96px;top:70px}}
-  .cartes,.formulaire{grid-template-columns:1fr}
+  .cartes,.formulaire,.coordonnees{grid-template-columns:1fr}
   .grille{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 12px}
   .produit h3{font-size:17px}
   .produit__desc{display:none}
   .grille-recettes,.etape,.savoir__pas{grid-template-columns:1fr}
   .grille-recettes .recette-carte__photo{aspect-ratio:4/3}
   .rayon .photo{aspect-ratio:1/1}
-  .etape__photo{grid-column:auto}
+  .etape__photo,.etape__legende{grid-column:auto}
   .marche{grid-template-columns:1fr}
   .marche__tel{justify-self:start;display:inline-flex;align-items:center;min-height:44px}
   .fil a,.pp-recettes a{min-height:44px}
-  .jalon{width:78vw}
   .rail .recette-carte{width:72vw}
   .rc-achat__ident{grid-template-columns:76px minmax(0,1fr)}
   .ligne-panier{grid-template-columns:64px minmax(0,1fr) auto}
@@ -651,6 +663,8 @@ body.panier-ouvert{overflow:hidden}
   .pied{flex-direction:column;align-items:flex-start}
 }
 @media (prefers-reduced-motion:reduce){
+  .mbx *{transition-duration:0s!important}
+  .mbx-boite:not(.mbx-actif):hover .mbx-tiroir{transform:none!important}
   *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
   .js .rv{opacity:1;transform:none}
   .sp .m>span,.slide__texte .ligne>span{transform:none}

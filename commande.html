@@ -37,7 +37,8 @@
     <a href="histoire.html">Notre histoire</a>
     <a href="produits.html">Nos produits</a>
     <a href="recettes.html">Nos recettes</a>
-    <a href="#contact">Contact</a>
+    <a href="marches.html">Nos marchés</a>
+    <a href="contact.html">Contact</a>
   </nav>
   <div class="entete__outils">
     <button class="pill pill--panier" type="button" data-panier-ouvrir aria-controls="panier">Panier <span class="pill__n" data-panier-n>0</span></button>
@@ -49,7 +50,8 @@
   <a href="histoire.html">Notre histoire</a>
     <a href="produits.html">Nos produits</a>
     <a href="recettes.html">Nos recettes</a>
-    <a href="#contact">Contact</a>
+    <a href="marches.html">Nos marchés</a>
+    <a href="contact.html">Contact</a>
   <div class="volet__bas"><a href="compte.html">Mon compte</a><a href="tel:0553402800">05 53 40 28 00</a></div>
 </nav>
 
@@ -122,47 +124,28 @@
 </main>
 
 <footer class="contact sur-fonce" id="contact">
-  <div class="contact__grille">
+  <div class="contact__haut">
     <div class="contact__visite">
       <p class="etiquette">Vous êtes dans le coin ?</p>
       <h2>Rendez-vous à notre boutique</h2>
-      <address class="coordonnees">
+    </div>
+    <div class="contact__marque">
+      <img class="contact__medaille" src="img/badge-prix-public.webp" alt="Foie Gras Quillot, champion du monde du cassoulet de Toulouse, prix du public 2026" width="480" height="480">
+      <img class="contact__logo" src="img/logo-creme.webp" alt="Foie Gras Quillot" width="240" height="267">
+    </div>
+  </div>
+  <address class="coordonnees">
         <div><span class="etiquette">Atelier et boutique</span>1795 route de Bias<br>47440 Casseneuil</div>
         <div><span class="etiquette">Horaires</span>Du lundi au vendredi, 8h–12h et 14h–17h</div>
         <div><span class="etiquette">Téléphone</span><a href="tel:0553402800">05 53 40 28 00</a> · <a href="tel:0607323619">06 07 32 36 19</a></div>
       </address>
-    </div>
-    <div class="contact__ecrire">
+  <div class="contact__bas">
+    <div class="contact__ecrire contact__cta">
       <p class="etiquette">Des questions sur nos produits ?</p>
       <h2>Contactez-nous</h2>
-      <form class="formulaire" data-demo>
-        <label><span>Nom</span><input type="text" name="nom" autocomplete="family-name" required></label>
-        <label><span>Prénom</span><input type="text" name="prenom" autocomplete="given-name"></label>
-        <label class="plein"><span>E-mail</span><input type="email" name="email" autocomplete="email" required></label>
-        <label class="plein"><span>Motif de votre demande</span>
-          <select name="motif" data-motif required>
-            <option value="" data-reponse="">Choisissez un motif</option>
-            <option value="question" data-reponse="Nous vous répondons par e-mail ou par téléphone, du lundi au vendredi (8h–12h, 14h–17h).">Une question sur un produit ou une commande</option>
-            <option value="abime" data-commande data-photos data-reponse="Un colis ou un produit abîmé se signale de préférence sous 48 heures, avec des photos et votre numéro de commande. Gardez les produits dans leur emballage d’origine : nous proposons un remplacement, un complément ou un remboursement. Pour un colis endommagé, formulez aussi des réserves auprès du transporteur et confirmez-les par lettre recommandée dans les 3 jours.">Colis ou produit abîmé</option>
-            <option value="manquant" data-commande data-photos data-reponse="Indiquez les produits manquants ou non conformes, avec des photos et votre numéro de commande, de préférence sous 48 heures. Nous proposons un remplacement, un complément ou un remboursement.">Produit manquant ou non conforme</option>
-            <option value="allergie" data-reponse="Dans le doute, ne consommez pas le produit. Si votre question est urgente, appelez l’atelier au 05 53 40 28 00 : une personne de l’équipe vous répond directement.">Allergie, composition ou conservation d’un produit</option>
-            <option value="modification" data-commande data-reponse="Une commande se modifie ou s’annule tant qu’elle n’est ni préparée ni expédiée. Appelez sans délai le 05 53 40 28 00, puis confirmez par ce formulaire.">Modifier ou annuler une commande</option>
-            <option value="retractation" data-retractation data-reponse="Pour vous rétracter (14 jours après réception), utilisez la page dédiée : elle donne un accusé de réception immédiat.">Me rétracter d’une commande</option>
-            <option value="autre" data-reponse="Nous vous répondons par e-mail ou par téléphone, du lundi au vendredi (8h–12h, 14h–17h).">Autre demande</option>
-          </select>
-        </label>
-        <p class="plein motif-info" role="status" data-motif-info hidden></p>
-        <label class="plein" data-champ-commande hidden><span>Numéro de commande</span><input type="text" name="commande" autocomplete="off" placeholder="Q-20261028-001"></label>
-        <label class="plein" data-champ-photos hidden><span>Photos du colis et des produits (facultatif)</span><input type="file" name="photos" accept="image/*" multiple></label>
-        <label class="plein"><span>Votre message</span><textarea name="message" required></textarea></label>
-        <label class="consent plein"><input type="checkbox" name="consentement" required><span>J’accepte que ces informations servent à répondre à ma demande. <a href="confidentialite.html">Politique de confidentialité</a></span></label>
-        <input class="piege" type="text" name="site" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <button class="btn btn--plein" type="submit">Envoyer</button>
-        <p class="statut plein" role="status" data-statut></p>
-      </form>
+      <p>Une question sur un produit, un colis abîmé, une commande à modifier : écrivez-nous, nous répondons du lundi au vendredi.</p>
+      <a class="btn btn--plein" href="contact.html">Nous écrire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg></a>
     </div>
-  </div>
-  <div class="contact__bas">
     <div class="contact__lettre">
       <p class="etiquette">La lettre du terroir</p>
       <h2>Une recette du terroir dans votre boîte mail</h2>
@@ -176,10 +159,6 @@
   <p class="statut" role="status" data-statut></p>
 </form>
 
-    </div>
-    <div class="contact__marque">
-      <img class="contact__medaille" src="img/badge-prix-public.webp" alt="Foie Gras Quillot, champion du monde du cassoulet de Toulouse, prix du public 2026" width="480" height="480">
-      <img class="contact__logo" src="img/logo-creme.webp" alt="Foie Gras Quillot" width="240" height="267">
     </div>
   </div>
   <div class="pied">

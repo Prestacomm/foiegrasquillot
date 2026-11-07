@@ -33,7 +33,7 @@
         <ul>${c.lignes.map(l => `<li><span>${l.q} × ${esc(l.nom)}${l.format ? ' (' + esc(l.format) + ')' : ''}</span><span>${eur(l.prix * l.q)}</span></li>`).join('')}</ul>
         <p class="commande-ligne__total">Sous-total ${eur(c.st)}${c.remise ? ' · Remise −' + eur(c.remise) : ''} · Livraison ${c.liv ? eur(c.liv) : 'offerte'} · <b>Total TTC ${eur(c.total)}</b></p>
         <p>Livraison : ${esc(c.adresse.prenom)} ${esc(c.adresse.nom)}, ${esc(c.adresse.rue)}${c.adresse.comp ? ', ' + esc(c.adresse.comp) : ''}, ${esc(c.adresse.cp)} ${esc(c.adresse.ville)}. <i>Statut : enregistrée (démonstration).</i></p>
-        <p class="commande-ligne__actions"><a href="index.html?motif=abime&amp;cmd=${encodeURIComponent(c.numero)}#contact">Signaler un problème</a> · <a href="retractation.html?cmd=${encodeURIComponent(c.numero)}">Me rétracter</a></p>
+        <p class="commande-ligne__actions"><a href="contact.html?motif=abime&amp;cmd=${encodeURIComponent(c.numero)}">Signaler un problème</a> · <a href="retractation.html?cmd=${encodeURIComponent(c.numero)}">Me rétracter</a></p>
       </details>`).join('') : '<p class="vide">Vous n’avez pas encore passé de commande.</p><a class="btn btn--plein" href="produits.html">Voir les produits</a>';
       return cmds;
     };
