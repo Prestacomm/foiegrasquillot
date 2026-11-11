@@ -620,10 +620,11 @@ body.panier-ouvert{overflow:hidden}
   .cartes{grid-template-columns:1fr 1fr}
   .carte--grande{grid-row:auto;grid-column:1/-1}
   .carte--grande .photo{aspect-ratio:4/3;min-height:0}
-  .champion{position:relative;height:auto;min-height:0;margin-bottom:0;grid-template-columns:1fr;grid-template-rows:none}
+  .champion{--bd:clamp(88px,22vw,150px);position:relative;height:auto;min-height:0;margin-bottom:0;grid-template-columns:1fr;grid-template-rows:none}
   .champion__fond{grid-column:1;aspect-ratio:4/3;height:auto;object-position:50% 30%}
-  .champion__texte{grid-column:1;grid-row:2;padding-top:clamp(36px,6vw,64px)}
-  .champion .badge-sticker{left:auto;right:var(--gut);top:clamp(90px,14vh,150px)}
+  .champion__texte{grid-column:1;grid-row:2;padding-top:calc(var(--bd) / 2 + 22px)}
+  /* La médaille chevauche le bas de la photo (3/4 de la largeur) au lieu de masquer la plaque */
+  .champion .badge-sticker{left:auto;right:var(--gut);top:calc(75vw - var(--bd) / 2);width:var(--bd)}
   .coordonnees{grid-template-columns:repeat(2,minmax(0,1fr))}
   .coordonnees div:last-child{grid-column:1/-1}
   .etape{grid-template-columns:minmax(0,1fr) minmax(0,3fr)}
